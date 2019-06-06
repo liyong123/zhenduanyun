@@ -1,0 +1,732 @@
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/bgn4@1x.jpeg');
+    background-size: auto 100% ;
+}
+.buildModel {
+    overflow: hidden;
+}
+
+.buildModel .breadcrumb {
+    padding: 20px 0 10px 0;
+    margin-bottom: 0;
+    background: none;
+}
+
+.buildModel .breadcrumb > li a {
+    color: #333;
+    opacity: 0.6;
+}
+
+.buildModel .breadcrumb > .active {
+    color: #333;
+}
+
+.buildModelNav {
+    padding: 25px 180px;
+    background: #fff;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+}
+
+.bMNav {
+    width: 33.33%;
+    float: left;
+    font-size: 12px;
+    color: #333;
+    position: relative;
+}
+
+.bMNavTwo .bMNavCen {
+    margin: 0 auto;
+}
+
+.bMNavThree .bMNavCen {
+    float: right;
+}
+
+.bMNavCen {
+    width: 108px;
+    text-align: center;
+    color: #333;
+    display: block;
+}
+
+.bM_NavIcon {
+    width: 66px;
+    height: 66px;
+    margin: 15px auto;
+    margin-top: 0;
+    background: url("../images/buildModelIcon.png") no-repeat;
+}
+
+.bMNavOne .bM_NavIcon {
+    background-position: -74px -410px;
+}
+
+.bMNavTwo .bM_NavIcon {
+    background-position: -177px -410px;
+}
+
+.bMNavThree .bM_NavIcon {
+    background-position: -287px -410px;
+}
+
+.bMNavOne .bM_NavIconOn {
+    background-position: -74px -498px;
+}
+
+.bMNavTwo .bM_NavIconOn {
+    background-position: -177px -498px;
+}
+
+.bMNavThree .bM_NavIconOn {
+    background-position: -287px -498px;
+}
+
+.bMNavLine {
+    width: 256px;
+    border: 1px dashed #edf0f7;
+    position: absolute;
+    top: 33px;
+}
+
+.bMNavLineOn {
+    border: 1px dashed #1bb4ef;
+}
+
+.bMNavLineOne {
+    left: 108px;
+}
+
+.bMNavLineTwo {
+    left: 193px;
+}
+
+.buildModelCon {
+    background: #fff;
+    padding-bottom: 60px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+}
+
+.bMConTitle {
+    height: 65px;
+    line-height: 65px;
+    padding-left: 20px;
+    color: #333;
+    font-size: 18px;
+    border-bottom: 1px solid #edf0f7;
+}
+
+.bMConSelect {
+    padding: 20px;
+}
+
+.bMC_SName {
+    padding-top: 10px;
+    color: #8b909a;
+}
+
+.bMC_Sselect {
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 34px;
+}
+
+.bMC_Sselect .form-control {
+    display: inline-block;
+    border-radius: 25px;
+    width: 240px;
+}
+
+.bMConCenter {
+    padding: 0 20px;
+}
+
+.bMConCircularBig {
+    width: 570px;
+    height: 570px;
+    border-radius: 100%;
+    border: 1px solid #333;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bMConCircular {
+    width: 540px;
+    height: 540px;
+    border-radius: 100%;
+    border: 1px dashed rgba(51, 51, 51, 0.6);
+    margin: 15px auto;
+}
+
+.bMConCir {
+    position: absolute;
+    width: 100%;
+    cursor: pointer;
+}
+
+.bMConCir_a {
+    top: 45px;
+    left: -160px;
+}
+
+.bMConCir_b {
+    top: 85px;
+    left: 435px;
+}
+
+.bMConCir_c {
+    top: 365px;
+    right: -463px;
+}
+
+.bMConCir_d {
+    top: 484px;
+    left: -141px;
+}
+
+.bMConCir_e {
+    top: 240px;
+    left: -279px;
+}
+
+.bMConCir .bMConCir_img {
+    float: left;
+    background: url("../images/buildModelIcon.png") no-repeat;
+}
+
+.bMConCir_a .bMConCir_img {
+    width: 119px;
+    height: 119px;
+    margin-top: -35px;
+    background-position: -61px -72px;
+}
+
+.bMConCir_b .bMConCir_img {
+    width: 140px;
+    height: 140px;
+    margin-top: -35px;
+    background-position: -217px -61px;
+}
+
+.bMConCir_c .bMConCir_img {
+    width: 117px;
+    height: 117px;
+    margin-top: -20px;
+    background-position: -394px -73px;
+}
+
+.bMConCir_d .bMConCir_img {
+    width: 119px;
+    height: 119px;
+    margin-top: -30px;
+    background-position: -550px -72px;
+}
+
+.bMConCir_e .bMConCir_img {
+    width: 97px;
+    height: 97px;
+    background-position: -708px -83px;
+}
+
+.bMConCir_a .bMConCir_imgOn {
+    background-position: -61px -241px;
+}
+
+.bMConCir_b .bMConCir_imgOn {
+    background-position: -217px -230px;
+}
+
+.bMConCir_c .bMConCir_imgOn {
+    background-position: -394px -242px;
+}
+
+.bMConCir_d .bMConCir_imgOn {
+    background-position: -550px -241px;
+}
+
+.bMConCir_e .bMConCir_imgOn {
+    background-position: -708px -252px;
+}
+
+.bMConCir_txt {
+    font-size: 14px;
+    color: #313339;
+    display: table;
+    float: left;
+    padding: 0 20px;
+}
+
+.bMConCir_txt b {
+    display: table-cell;
+    font-family: Arial;
+    font-size: 72px;
+    padding-right: 10px;
+}
+
+.bMConCir_txt div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.bMConCir_txt span {
+    font-size: 12px;
+    color: #74767b;
+}
+
+.bMConCirBtn {
+    display: block;
+    width: 235px;
+    height: 235px;
+    margin-left: -117.5px;
+    margin-top: -117.5px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    background: url("../images/buildModelIcon.png") no-repeat;
+    background-position: -872px -97px;
+    /*background-position: -1144px -95px;*/
+}
+
+.cirBtna {
+    background-position: -1144px -95px;
+    animation: shadow 5s linear infinite;
+    -webkit-animation: shadow 5s linear infinite;
+    /* box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
+    border-radius: 100px; */
+}
+
+@-webkit-keyframes shadow {
+    0%,
+    50%,
+    100% {
+        transform: scale(0.6)
+    }
+    25%,
+    75% {
+        transform: scale(1)
+    }
+}
+
+@keyframes shadow {
+    0%,
+    50%,
+    100% {
+        transform: scale(00.8)
+    }
+    25%,
+    75% {
+        transform: scale(1)
+    }
+}
+
+/* model */
+
+.modal-header {
+    margin-bottom: 0;
+    background: #03a9f5;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px 4px 0 0;
+}
+
+.close {
+    color: #fff;
+    opacity: 1;
+}
+
+.modelTitleIcon {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: url("../images/buildModelIcon.png") no-repeat;
+}
+
+#aModal .modelTitleIcon {
+    width: 20px;
+    height: 14px;
+    background-position: -85px -694px;
+}
+
+#bModal .modelTitleIcon {
+    width: 16px;
+    height: 18px;
+    background-position: -125px -692px;
+}
+
+#cModal .modelTitleIcon {
+    width: 14px;
+    height: 20px;
+    background-position: -161px -692px;
+}
+
+#dModal .modelTitleIcon {
+    width: 19px;
+    height: 19px;
+    vertical-align: sub;
+    background-position: -195px -690px;
+}
+
+#eModal .modelTitleIcon {
+    width: 18px;
+    height: 16px;
+    background-position: -233px -692px;
+}
+
+.modelInps {
+    padding: 10px 0;
+}
+
+.modelName {
+    float: left;
+    width: 30%;
+    text-align: right;
+    color: #5d5e62;
+    line-height: 34px;
+}
+
+.modelInp {
+    float: left;
+    width: 25%;
+}
+
+.modelInp .form-control {
+    width: 90%;
+    float: left;
+}
+
+.modalRight {
+    float: left;
+    width: 45%;
+    color: #999;
+    text-align: left;
+}
+
+.modalRight div:last-child {
+    color: #c2c2c2;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modelTip {
+    padding: 5px 20px;
+    text-align: center;
+    color: #f87514;
+    border: 1px solid #f87514;
+    border-radius: 25px;
+    background: #fee9da;
+    margin-bottom: 5px;
+    display: inline-block;
+    opacity: 0;
+}
+
+.modelTipBox {
+    width: 10%;
+    height: 34px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.modelTipIcon {
+    color: #f87514;
+    border-radius: 50px;
+    width: 12px;
+    height: 12px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 12px;
+    display: block;
+    border: 1px solid #f87514;
+    margin-left: 10px;
+    margin-top: 11px;
+}
+
+.modal-footer {
+    border-top: 0;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 30px;
+}
+
+.modal-footer .btn {
+    width: 100px;
+    height: 40px;
+}
+
+.btn-default {
+    background: #c6c9cf;
+    border: 0;
+    color: #fff;
+}
+
+.btn-primary {
+    background: #03a9f5;
+    border: 0;
+}
+
+.modal-footer .btn + .btn {
+    margin-left: 30px;
+}
+
+/* modal end */
+
+.industryBtn {
+    text-align: center;
+}
+
+.industryBtn a {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 25px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.industryBtnPrev {
+    background: #aeb1b8;
+}
+
+.industrySubmit {
+    margin-left: 30px;
+    background: #03a9f5;
+}
+
+.firstProgress {
+    width: 100%;
+    text-align: center;
+    color: #f9d31a;
+    display: none;
+}
+
+.progress {
+    height: 8px;
+    width: 1%;
+    border-radius: 0 25px 25px 0;
+    background: #f9d31a;
+    animation: pro 4s ease-out forwards;
+    -webkit-animation: pro 4s ease-out forwards;
+    -moz-animation: pro 4s ease-out forwards;
+    -o-animation: pro 4s ease-out forwards;
+}
+
+.transformW,
+.transformL {
+    width: 107px;
+    height: 107px;
+    background: #f9d31a;
+    margin: 70px auto
+}
+
+.transformW {
+    transform: rotate(45deg);
+    opacity: 0.5;
+    animation: tra 2s infinite linear;
+    -webkit-animation: tra 2s infinite linear;
+    -moz-animation: tra 2s infinite linear;
+    -o-animation: tra 2s infinite linear;
+}
+
+.transformL {
+    transform: rotate(-45deg);
+}
+
+@keyframes pro {
+    form {
+        width: 1%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@-moz-keyframes pro {
+    form {
+        width: 1%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes pro {
+    form {
+        width: 1%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@-o-keyframes pro {
+    form {
+        width: 1%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes tra {
+    form {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes tra {
+    form {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes tra {
+    form {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes tra {
+    form {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.form_datetime {
+    text-align: center;
+}
+
+.datetimepicker {
+    width: 240px;
+}
+
+.table-condensed {
+    width: 100%;
+}
+
+.modal-dialog {
+    width: 850px;
+    margin: 30px auto;
+}
+
+.successModel {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.fillTitle {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    padding: 50px 0 30px 0;
+    color: #01aced;
+}
+
+.fillBtns {
+    text-align: center;
+    background: #fff;
+    padding: 2% 10%;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fillBtns a {
+    margin-bottom: 10px;
+}
+
+.fillBtnItem {
+    width: 50%;
+    float: left;
+}
+
+.fillCenter {
+    width: 100%;
+    padding: 15px 0;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    width: 50%;
+    margin: 10px 0;
+    float: left;
+}
+
+.fillCenterBtn {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.fillCenterBtn a {
+    padding: 6px 30px;
+    margin-right: 20px;
+}
+
+.upload {
+    display: inline-block;
+    padding: 6px 12px;
+    position: relative;
+    border: 1px solid #999;
+    text-decoration: none;
+    color: #666;
+    border-radius: 4px;
+}
+
+.upload:hover {
+    text-decoration: none;
+    color: #03a9f5;
+    border: 1px solid #03a9f5;
+}
+
+.change {
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 35px;
+}
+
+.form-horizontal {
+    padding: 2% 0;
+}
+
+.form-horizontal:first-child {
+    padding: 0;
+}
+
+.filldataName {
+    color: #333;
+    font-size: 16px;
+    padding: 1% 0;
+}
+
+.form-group label {
+    font-weight: inherit;
+    color: #666;
+}
+
+#tipModal .modal-footer .btn,
+#tipModalSuccess .modal-footer .btn,
+#tipModalFail .modal-footer .btn,
+#tipModalData .modal-footer .btn{
+    height: inherit;
+    margin-top: 15px;
+}

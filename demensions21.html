@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>制造21维度评测报告</title>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet/less" type="text/css" href="./css/less/demensions21.less" />
+    <script src="./js/utils/less.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- header -->
+        <header class="_header">
+            <div>制造21维度评测</div>
+            <div>制造21维度评测报告</div>
+            <Line class="line"></Line>
+        </header>
+        <!-- intro -->
+        <ul class="introduce" id="introduce">
+        
+        </ul>
+        <rectangle class="rectangle" style="margin-top: 38px"></rectangle>
+        <!-- introduce & specification -->
+        <div class="evaluation_specification">
+            <aside>
+                <span>测评结果</span>
+                <brick></brick>
+                <article>
+                    <div tag="score">
+                        <span>得分/</span>
+                        <span>总分 :</span>
+                        <span>评级 :</span>
+                    </div>
+                    <div>
+                        <div tag="circle">
+                            <span id="currentScore">38/</span>
+                            <span>105</span>
+                        </div>
+                        <ul id="ulLevel"></ul>
+                        <div id="progressBack"></div>
+                        <div id="progressFront"></div>
+                        <div id="ball"></div>
+                        <div id="triangle"></div>
+                        <div id="level"></div>
+                    </div>
+
+
+                </article>
+            </aside>
+            <aside>
+                <span>综合说明</span>
+                <brick></brick>
+                <article id="synthesizeRemark">
+                     
+                </article>
+            </aside>
+        </div>
+        <rectangle class="rectangle" style="margin-bottom: 38px;"></rectangle>
+        <div class="hugeTitle">制造21维度评价分布</div>
+        <brick class="brick"></brick>
+        <div id="radar" style="width: 1000px; height: 450px;"></div>
+
+        <div class="hugeTitle">测评详情</div>
+        <brick class="brick"></brick>
+        <table id="table" class="table table-bordered" style="margin-top: 36px; margin-bottom: 60px;">
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+
+<script src="./lib/jquery.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src='./lib/echarts.js'></script>
+<script src="./js/utils/components.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/utils/radar.js"></script>
+<script src="./js/demensions21.js"></script>
+<script>
+
+</script>

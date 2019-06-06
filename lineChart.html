@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./lib/animate.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/buildModel.css">
+    <link rel="stylesheet" href="./css/result_new_backup.css">
+    <title>企业绩效评价诊断</title>
+</head>
+
+<body>
+
+
+    <div style="margin-left:50px;" id="demo"></div>
+    <div class="footer">
+        <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+        <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+    </div>
+    <script src="./lib/jquery.js"></script>
+    <script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./lib/echarts.js"></script>
+    <script src="./lib/wow.min2.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/lineChart.js"></script>
+    <script>
+        $('#demo').lineChart({
+            "title": "资产质量状况模型",
+            width: '80%',
+            color: 'red',
+            "value": 11,
+            "marks": [25, 20, 15, 10, 0],
+            "areaLabels": [{
+                "label": "优秀",
+                "start": 25,
+                "end": 9999
+            }, {
+                "label": "良好",
+                "start": 20,
+                "end": 25
+            }, {
+                "label": "平均",
+                "start": 15,
+                "end": 20
+            }, {
+                "label": "较低",
+                "start": 10,
+                "end": 15
+            }, {
+                "label": "较差",
+                "start": 0,
+                "end": 10
+            }]
+        });
+    </script>
+</body>
+
+</html>

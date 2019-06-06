@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="./lib/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="./css/cjAll.css">
+	<link rel="stylesheet" href="./css/header.css">
+	<link rel="stylesheet" href="./css/mine.css">
+	<title>我的诊断</title>
+</head>
+
+<body>
+	<div class="headerH">
+		<div class="header headLogoBlue bgWhite">
+			<div class=" w1200">
+				<div class="headLogo">
+					<label>
+                        <img src="./images/logo_blue.png" /> 诊断云
+                    </label>
+				</div>
+				<div class="headNav">
+					<ul>
+						<li>
+							<a href="./index.html">首页</a>
+						</li>
+						<li>
+							<a href="./knowmore.html">了解诊断</a>
+						</li>
+						<li>
+							<a href="./modallib.html">诊断模型库</a>
+						</li>
+						<li class="navOn">
+							<a href="./list.html">诊断服务</a>
+						</li>
+						<li>
+							<a href="./map.html">诊断服务地图</a>
+						</li>
+						<li>
+							<a href="./about.html">关于我们</a>
+						</li>
+					</ul>
+				</div>
+				<div class="headUser yesSessionid showBox">
+					<div class="headUser_name">
+						<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+						<span></span>
+					</div>
+					<i class="fa fa-angle-down" aria-hidden="true"></i>
+				</div>
+				<div class="headUser hide noSessionid">
+					<a href="./login.html" class="alogin">登录</a>
+				</div>
+				<div class="signOut">
+					<i class="fa fa-caret-up" aria-hidden="true"></i>
+					<ul>
+
+						<li>
+							<a href="./mine.html">我的诊断</a>
+						</li>
+						<li>
+							<a id="comment">我要点评</a>
+						</li>
+						<li>
+							<a id="feedback">意见反馈</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" id="outLogin">退出</a>
+						</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<main class="content">
+		<div class="main_left">
+			<h3>我的诊断</h3>
+
+			<!--<p id="synthesize"><i class="fa fa-download "></i> 企业综合诊断报告</p>-->
+
+			<!--<p id="subentryIntegration"><i class="fa fa-area-chart"></i>智能制造成熟度分项集成报告<i class="fa fa-chevron-right "></i></p>-->
+			<!--模型名称列表-->
+			<div class="modal_name" id="sub_name" style="display: none">
+				<!--<p class="modalNameActive">流程型</p>
+				<p class="">离散型</p>-->
+			</div>
+
+			<p id="main_list"><i class="fa fa-clock-o "></i> 历史诊断列表 <i class="fa fa-chevron-right "></i></p>
+			<div class="modal_name" id="modal_name_list">
+				<p class="" id="maturity">智能制造成熟度模型</p>
+				<p class="" id="performanes"> 企业绩效评价诊断</p>
+				<p class="" id="dimensionality">制造21维度评测</p>
+				<p class="" id="internetIndustry">工业互联网成熟度模型</p>
+				<p class="" id="surveyQuestion">企业调研问卷分析</p>
+				<p class="" id="HRManage">人力资源管理评测</p>
+			</div>
+
+			<p id="statistics"><i class="fa fa-line-chart"></i>我的统计<i class="fa fa-chevron-right"></i></p>
+			<!--模型名称列表-->
+			<div class="modal_name" id="modal_name" style="display: none">
+				<!--<p class="modalNameActive">流程型</p>
+				<p class="">离散型</p>-->
+			</div>
+		</div>
+		<div class="main_right">
+			<!--企业综合诊断报告-->
+			<div id="synthesizeCon" class="synthesizeCon">
+				<h3 class="synthesizeTitle">企业综合诊断报告</h3>
+				<a class="downloadSSYN" id="exports" download="" href="">下载</a>
+
+				<div id="synthesizeText" style="width: 80%;height:100%;margin: auto;padding-top: 20px;padding-bottom: 10px;">
+					<iframe src="" id="pdfCon" width="100%" height="1000"></iframe>
+				</div>
+			</div>
+
+			<!--我的诊断列表-->
+			<!--成熟度诊断列表-->
+			<div class="mineList" id="mineList" style="display: none">
+				<div class="table_title">
+					智能制造成熟度模型
+					<form class="form-inline" style="float: right;">
+						<div class="form-group">
+							<div class="input-group" style="border-right: 0px;border-radius: 5px;">
+								<div class="input-group-addon" style="background-color: #fff;border-right: 0px;color: d2d2d2;">
+									<i class="fa fa-search" id="searchls"></i>
+								</div>
+								<input type="text" name="tem_name" class="form-control" placeholder="模型名称" style="border-left: 0px;">
+							</div>
+						</div>
+					</form>
+				</div>
+				<table class="table table-hover">
+					<tr>
+						<th></th>
+						<th>序号</th>
+						<th>模型名称</th>
+						<th>问卷类型</th>
+						<th>问卷状态</th>
+						<th>诊断时间</th>
+						<th>操作</th>
+					</tr>
+					<tbody id="mine_tbody"></tbody>
+				</table>
+				<p class="UNdata" id="mine_subent">暂无数据</p>
+				<p id="hint" style="width: 100%;text-align: center;color: red;"></p>
+				<nav aria-label="Page navigation" style="float: right;margin-right: 20px;">
+					<ul class="pagination" id="pages"></ul>
+				</nav>
+			</div>
+
+			<!--企业绩效评价列表-->
+			<div class="mineList" id="perforList" style="display: none">
+				<div class="table_title">
+					企业绩效评价列表
+				</div>
+				<table class="table table-hover">
+					<tr>
+						<th></th>
+						<th>序号</th>
+						<th>模型名称</th>
+						<th>数据年份</th>
+						<th>对标年份</th>
+						<th>诊断时间</th>
+						<th>操作</th>
+					</tr>
+					<tbody id="perfor_tbody"></tbody>
+				</table>
+				<p class="UNdata" id="perfor_subent">暂无数据</p>
+			</div>
+
+			<!--制造21维度评测列表-->
+			<div class="mineList" id="dimenList" style="display: none">
+				<div class="table_title">制造21维度评测列表</div>
+				<table class="table table-hover" style="table-layout: fixed;">
+					<tr>
+						<th style="width: 20px;"></th>
+						<th style="width: 50px;">序号</th>
+						<th style="width: 10%;">评测时间</th>
+						<th style="width: 10%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">评测现场</th>
+						<th style="width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">评测人单位</th>
+						<th style="width:100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">评测单位</th>
+						<th style="width: 5%;">得分</th>
+						<th style="width: 5%;">评级</th>
+						<th style="width: 8%;">评测类型</th>
+						<th style="width: 6%;">状态</th>
+						<th style="width: 7%;">评测人</th>
+						<th style="width: 6%;">操作</th>
+					</tr>
+					<tbody id="dimen_tbody">
+						<!--<tr>
+							<td></td>
+							<td>1</td>
+							<td>2018-04-18</td>
+							<td>南京江宁</td>
+							<td>南京江宁</td>
+							<td>南京江宁</td>
+							<td>105</td>
+							<td>5级</td>
+							<td>企业评测</td>
+							<td>完成</td>
+							<td>张三</td>
+							<td><span title="查看详情" class="search"><img src="./img/01.png" alt=""></span><span class="trash" title="删除问卷"><img src="./img/03.png" alt=""></span></td>
+						</tr>-->
+					</tbody>
+				</table>
+				<p class="UNdata" id="dimen_subent">暂无数据</p>
+				<p id="dimen_hint" style="width: 100%;text-align: center;color: red;"></p>
+				<nav aria-label="Page navigation" style="float: right;margin-right: 20px;">
+					<ul class="pagination" id="dimen_pages">
+						<!--<li><a href="#">上一页</a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">下一页</a></li>
+						<li><a>共2页</a></li>-->
+					</ul>
+				</nav>
+			</div>
+
+			<!--工业互联网成熟度模型-->
+			<div class="mineList" id="internetList" style="display: none">
+				<div class="table_title">工业互联网成熟度模型</div>
+				<table class="table table-hover" style="table-layout: fixed;">
+					<tr>
+						<th style="width: 5%"></th>
+						<th style="width: 7%">序号</th>
+						<th style="width: 11%;">评测时间</th>
+						<th style="width: 11%;">制造类型</th>
+						<th style="width: 11%;">评测范围</th>
+						<th style="width: 11%;">评测类型</th>
+						<th style="width: 11%;">状态</th>
+						<th style="width: 11%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">评测人</th>
+						<th style="width: 11%;">操作</th>
+					</tr>
+					<tbody id="internet_tbody">
+						<!--<tr>
+							<td></td>
+							<td>1</td>
+							<td>2018-04-18</td>
+							<td>离散</td>
+							<td>综合评测</td>
+							<td>企业自评</td>
+							<td>完成</td>
+							<td>张三</td>
+							<td><span title="查看详情" class="search"><img src="./img/01.png" alt=""></span><span class="trash" title="删除问卷"><img src="./img/03.png" alt=""></span></td>
+						</tr>-->
+					</tbody>
+				</table>
+				<p class="UNdata" id="internet_subent">暂无数据</p>
+				<p id="internet_hint" style="width: 100%;text-align: center;color: red;"></p>
+				<nav aria-label="Page navigation" style="float: right;margin-right: 20px;">
+					<ul class="pagination" id="internet_pages">
+						<li><a href="#">上一页</a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">下一页</a></li>
+						<li><a>共2页</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<!--企业调研问卷分析-->
+			<div class="mineList" id="surveyList" style="display: none">
+				<div class="table_title">企业调研问卷分析</div>
+				<table class="table table-hover" style="table-layout: fixed;">
+					<tr>
+						<th style="width: 5%"></th>
+						<th style="width: 7%">序号</th>
+						<th>调研名称</th>
+						<th>调研地区</th>
+						<th>报告日期</th>
+						<th>状态</th>
+						<th>操作</th>
+					</tr>
+					<tbody id="survey_tbody">
+						<!--<tr>
+							<td></td>
+							<td>1</td>
+							<td>制造2</td>
+							<td>颠三倒四</td>
+							<td>2018-0702</td>
+							<td>完成</td>
+							<td><span title="查看详情" class="search"><img src="./img/01.png" alt=""></span><span class="trash" title="删除问卷"><img src="./img/03.png" alt=""></span></td>
+						</tr>-->
+					</tbody>
+				</table>
+				<p class="UNdata" id="survey_subent">暂无数据</p>
+				<p id="surver_hint" style="width: 100%;text-align: center;color: red;"></p>
+				<nav aria-label="Page navigation" style="float: right;margin-right: 20px;">
+					<ul class="pagination" id="survey_pages">
+						<li><a href="#">上一页</a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">下一页</a></li>
+						<li><a>共2页</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<!--  人力资源管理评测-->
+			<div class="mineList" id="HRManageList" style="display: none">
+				<div class="table_title">人力资源管理评测</div>
+				<table class="table table-hover" style="table-layout: fixed;">
+					<tr>
+						<th style="width: 5%"></th>
+						<th style="width: 7%">序号</th>
+						<th>评测单位</th>
+						<th>评测日期</th>
+						<th>评测类型</th>
+						<th>评测人岗位</th>
+						<th>评测人</th>
+						<th>状态</th>
+						<th>操作</th>
+					</tr>
+					<tbody id="HRManage_tbody">
+						<!--<tr>
+							<td></td>
+							<td>1</td>
+							<td>评测单位</td>
+							<td>评测日期</td>
+							<td>评测类型</td>
+							<td>评测人岗位</td>
+							<td>评测人</td>
+							<td>完成</td>
+							<td><span title="查看详情" class="search"><img src="./img/01.png" alt=""></span><span class="trash" title="删除问卷"><img src="./img/03.png" alt=""></span></td>
+						</tr>-->
+					</tbody>
+				</table>
+				<p class="UNdata" id="HRManage_subent">暂无数据</p>
+				<p id="HRManage_hint" style="width: 100%;text-align: center;color: red;"></p>
+				<nav aria-label="Page navigation" style="float: right;margin-right: 20px;">
+					<ul class="pagination" id="HRManage_pages">
+						<li><a href="#">上一页</a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">下一页</a></li>
+						<li><a>共2页</a></li>
+					</ul>
+				</nav>
+			</div>
+
+
+			<!--我的统计结果-->
+			<div class="relativelyResult" id="relativelyResult" style="display: none">
+				<h3 id="relativelyResulth3">
+					<span class="appraisalActive" id="entiretyTitlt" title="">整体评测</span>
+					<span class="" id="subentryTitlt">分项评测</span>
+				</h3>
+
+				<!--整体评测-->
+				<p class="UNdata" id="subent">暂无数据</p>
+				<div class="entiretyAppraisal" id="entiretyAppraisal">
+					<div>
+						<div class="ent_score" id="ent_score">
+							<i class="fa fa-long-arrow-up"></i>
+							<strong id="finalScore">2.57</strong><br>
+							<span id="entRank">规范及</span>
+						</div>
+						<div class="ent_detail" id="entDetail">
+							在这个级别下，企业已形成了智能制造的规划，对支撑核心业务的设备和系统进行投资，通过技术改造，使得主要设备具备数据采集和通信的能力，实现了覆盖核心业务重要环节的自动化、数字化升级。通过制定标准化的接口和数据格式，部分支撑生产作业的信息系统能够实现内部集成，数据和信息在业务内部实现共享，企业开始迈进智能制造的门槛
+						</div>
+					</div>
+					<div class="histogram_radar">
+						<div class="histogramAll">
+							<p>
+								<span>级别对比</span>
+								<span class="histogramLabel">
+									<span><i></i>最新次</span>
+								<span><i></i>次新次</span>
+								</span>
+							</p>
+							<div class="histogram" id="histogram"></div>
+						</div>
+					</div>
+					<div class="radarMap" id="radarMap">
+						<div class="radarAll">
+							<p><span>已规划及 <strong>【1.0】</strong> </span><span class="standard">达标</span></p>
+							<div class="radar" id="radarMap0"></div>
+						</div>
+						<div class="radarAll">
+							<p><span>规范及<strong>【1.0】</strong></span><span class="standard">达标</span></p>
+							<div class="radar" id="radarMap1"></div>
+						</div>
+						<div class="radarAll">
+							<p><span>集成及<strong>【1.0】</strong></span><span class="standard">达标</span></p>
+							<div class="radar" id="radarMap2"></div>
+						</div>
+						<div class="radarAll">
+							<p><span>优化及<strong>【1.0】</strong></span><span class="standard">达标</span></p>
+							<div class="radar" id="radarMap3"></div>
+						</div>
+						<div class="radarAll">
+							<p><span>引领及<strong>【1.0】</strong></span><span class="UNstandard">未达标</span></p>
+							<div class="radar" id="radarMap4"></div>
+						</div>
+					</div>
+				</div>
+
+				<!--分项评测-->
+				<p class="UNdata" id="subent">暂无数据</p>
+				<div class="subentryAppraisal" id="subentryAppraisal">
+					<!--分项-->
+					<div class="subentry">
+						<div id="serve">
+							<h4> <span>服务能力</span></h4>
+							<img src="./img/fx_fx05.png" alt="">
+							<div class="sub_detail">
+								<span style="color: #40cca6">0</span>
+								<span>未达标</span>
+							</div>
+						</div>
+						<div id="logistics">
+							<h4> <span>物流能力</span></h4>
+							<img src="./img/fx_fx04.png" alt="">
+							<div class="sub_detail">
+								<span style="color: #5f99f1">0</span>
+								<span>未达标</span>
+							</div>
+						</div>
+						<div id="market">
+							<h4> <span>销售能力</span></h4>
+							<img src="./img/fx_fx01.png" alt="">
+							<div class="sub_detail">
+								<span style="color: #5fcaf1">0</span>
+								<span>未达标</span>
+							</div>
+						</div>
+						<div id="production">
+							<h4><span>生产能力</span></h4>
+							<img src="./img/fx_fx02.png" alt="">
+							<div class="sub_detail">
+								<span style="color: #ac9efc">0</span>
+								<span>未达标</span>
+							</div>
+						</div>
+						<div id="design">
+							<h4><span>设计能力</span></h4>
+							<img src="./img/fx_fx03.png" alt="">
+							<div class="sub_detail">
+								<span style="color: #f1b85f">0</span>
+								<span>未达标</span>
+							</div>
+						</div>
+					</div>
+
+					<!--柱状图-->
+					<div class="sub_histogram">
+						<p>
+							<span>最新值与次新值的对比</span>
+							<span class="histogramLabel">
+								<span><i></i>最新次</span>
+							<span><i></i>次新次</span>
+							</span>
+						</p>
+						<div class="histogramSub" id="histogramSub"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!--模态框-->
+	<div class="modal fade" id="delete" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">删除问卷</h4>
+				</div>
+				<div class="modal-body">
+					<p style="width: 100%;text-align: center;line-height: 70px;">是否确定删除<strong id="title_model"></strong>问卷？</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal" id="delect_model">确定</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<!--删除制造21维度列表-->
+	<div class="modal fade" id="delete21" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">删除问卷</h4>
+				</div>
+				<div class="modal-body">
+					<p style="width: 100%;text-align: center;line-height: 70px;">是否确定删除<strong id="title_model21"></strong>问卷？</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal" id="delect_model21">确定</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<!--删除工业互联网成熟度列表-->
+	<div class="modal fade" id="deleteInternet" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">删除问卷</h4>
+				</div>
+				<div class="modal-body">
+					<p style="width: 100%;text-align: center;line-height: 70px;">是否确定删除<strong id="title_modelInternet"></strong>问卷？</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal" id="delect_modelInternet">确定</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
+	<!--删除企业调研问卷分析列表-->
+	<div class="modal fade" id="deleteServer" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">删除问卷</h4>
+				</div>
+				<div class="modal-body">
+					<p style="width: 100%;text-align: center;line-height: 70px;">是否确定删除<strong id="title_modelServer"></strong>问卷？</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal" id="delect_modelServer">确定</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
+	<!--删除人力资源管理评测列表-->
+	<div class="modal fade" id="deleteHRManage" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">删除问卷</h4>
+				</div>
+				<div class="modal-body">
+					<p style="width: 100%;text-align: center;line-height: 70px;">是否确定删除<strong id="title_modelHRManage"></strong>问卷？</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal" id="delect_modelHRManage">确定</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
+
+	<!--<div class="footer">
+		<p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+		<p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+	</div>-->
+</body>
+<script src="./lib/jquery.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./lib/echarts.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/mine.js"></script>
+
+</html>

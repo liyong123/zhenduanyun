@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./lib/animate.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/zd.css">
+    <link rel="stylesheet" href="./css/kunshan.css">
+    <title>诊断服务地图</title>
+
+</head>
+
+<body>
+    <div class="bgBlue" style="min-height:100%;">
+        <div class="headerH">
+            <div class="header bgBlue">
+                <div class="w1200 headLogoWhite">
+                    <div class="headLogo">
+                        <label>
+                            <img src="./images/logo_white.png" /> 诊断云
+                        </label>
+                    </div>
+                    <div class="headNav">
+                        <ul>
+                            <li>
+                                <a href="./index.html">首页</a>
+                            </li>
+                            <li>
+                                <a href="./knowmore.html">了解诊断</a>
+                            </li>
+                            <li>
+                                <a href="./modallib.html">诊断模型库</a>
+                            </li>
+                            <li>
+                                <a href="./list.html">诊断服务</a>
+                            </li>
+                            <li class="navOn">
+                                <a href="./map.html">诊断服务地图</a>
+                            </li>
+                            <li>
+                                <a href="./about.html">关于我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="headUser yesSessionid showBox">
+                        <div class="headUser_name">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            <span></span>
+                        </div>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="headUser hide noSessionid">
+                        <a href="./login.html" class="alogin">登录</a>
+                    </div>
+                    <div class="signOut">
+                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                        <ul>
+                            <li>
+                                <a href="./mine.html">我的诊断</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" id="outLogin">退出</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main1">
+            <div class="container-fluid main">
+                <div class="row" style="margin-top: 30px">
+                    <div class="col-xs-3 wow bounceInLeft" data-wow-delay="1s">
+                        <div class="model-box1" style="height:204px;overflow:hidden;">
+                            <div class="model-box1-title">
+
+                            </div>
+                            <div id="draw1" style="height:204px">
+
+                                <div style="padding:0 40px;padding-top:20px;">
+                                    <div style="letter-spacing:1px">当前坐标位置</div>
+
+                                    <div class="leftTopTitle">
+                                        <span>昆山</span><span>KUNSHAN</span>
+                                    </div>
+                                    <hr style="border-top: 1px solid #ffffff21;">
+                                    <div >
+                                        <span class="cropDiag" >注册企业数</span> 
+                                        <span class="cropNum">69</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="model-box1" style="height:256px;">
+                            <div class="model-box1-title">
+                                <div>成熟度</div>
+                            </div>
+                            <div id="draw4" style="height:240px">
+
+                            </div>
+                        </div>
+
+                        <div class="model-box1" style="height:256px;">
+                            <div class="model-box1-title">
+                                <div>企业绩效评价</div>
+                            </div>
+                            <div id="draw5" style="height:240px">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6 wow bounceInDown">
+                        <div id="china-map" style="height:736px;">
+
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 wow bounceInRight" data-wow-delay="1s">
+                        <div class="model-box1" style="height:736px; padding-left:24px; padding-top:36px;">
+                            <div class="model-box1-title2" style="text-align: left;margin-bottom: 6px;">
+                                <span class="regionName">KUNSHAN</span>
+                                <span class="stringYi">一</span>
+                                <span class="lightBlue">巴城区</span>
+                            </div>
+                            <ul class="cropWrapper">
+                                <li>
+                                    <span>1</span>
+                                    <span>苏州强时压缩机有限公司</span>
+                                </li>
+                                <li>
+                                    <span>2</span>
+                                    <span>昆山市兴凯胜精密模具有限公司</span>
+                                </li>
+                                <li>
+                                    <span>5</span>
+                                    <span>头领科技（昆山）有限公司</span>
+                                </li>
+                            </ul>
+
+                            <div class="model-box1-title2" style="text-align: left;margin-bottom: 6px;">
+                                <span class="regionName">KUNSHAN</span>
+                                <span class="stringYi">一</span>
+                                <span class="lightBlue">陆家区</span>
+                            </div>
+                            <ul class="cropWrapper">
+                                <li>
+                                    <span>4</span>
+                                    <span>旭东机械（昆山）有限公司</span>
+                                </li>
+                            </ul>
+
+
+                            <div class="model-box1-title2" style="text-align: left;margin-bottom: 6px;">
+                                <span class="regionName">KUNSHAN</span>
+                                <span class="stringYi">一</span>
+                                <span class="lightBlue">花桥区</span>
+                            </div>
+                            <ul class="cropWrapper">
+
+
+                                <li>
+                                    <span>3</span>
+                                    <span>奥科宁克（昆山）铝业有限公司</span>
+                                </li>
+                                <li>
+                                    <span>9</span>
+                                    <span>昆山德拉特兰传动科技有限公司</span>
+                                </li>
+                            </ul>
+                            <div class="model-box1-title2" style="text-align: left;margin-bottom: 6px;">
+                                <span class="regionName">KUNSHAN</span>
+                                <span class="stringYi">一</span>
+                                <span class="lightBlue">开发区</span>
+                            </div>
+                            <ul class="cropWrapper">
+                                <li>
+                                    <span>6</span>
+                                    <span>昆山艾博机器人股份有限公司</span>
+                                </li>
+                                <li>
+                                    <span>10</span>
+                                    <span>昆山精讯电子有限公司</span>
+                                </li>
+                            </ul>
+                            <div class="model-box1-title2" style="text-align: left;margin-bottom: 6px;">
+                                <span class="regionName">KUNSHAN</span>
+                                <span class="stringYi">一</span>
+                                <span class="lightBlue">张浦区</span>
+                            </div>
+                            <ul class="cropWrapper">
+                                <li>
+                                    <span>7</span>
+                                    <span>江苏新宁现代物流股份有限公司</span>
+                                </li>
+                                <li>
+                                    <span>11</span>
+                                    <span>迪亚姆展示设备（昆山）有限公司</span>
+                                </li>
+                                <li>
+                                    <span>12</span>
+                                    <span>昆山鸿志德电子科技有限公司</span>
+                                </li>
+                                <li>
+                                    <span>13</span>
+                                    <span>昆山康泰达电子科技有限公司</span>
+                                </li>
+                            </ul>
+                            <div class="model-box1-title2" style="text-align: left; margin-bottom: 6px;">
+                                <span class="regionName">KUNSHAN</span>
+                                <span class="stringYi">一</span>
+                                <span class="lightBlue">淀山湖区</span>
+                            </div>
+                            <ul class="cropWrapper">
+                                <li>
+                                    <span>8</span>
+                                    <span>澳帕曼安全织带（昆山）有限公司</span>
+                                </li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+            <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+        </div>
+    </div>
+    <div id="kunshan"></div>
+    <div id="kunshanMap">
+        <div id="company">
+
+        </div>
+    </div>
+</body>
+<script src="./lib/jquery.js"></script>
+<script src="./js/config.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./lib/wow.min2.js"></script>
+<script src="./js/map/echarts.js"></script>
+<script src="./js/map/china.js"></script>
+<script src="./js/map/map.js"></script>
+<script src="./js/map/kscsd.js"></script>
+<script src="./js/map/ksgdp.js"></script>
+
+
+<script>
+    $(function () {
+        new WOW().init();
+        Draw4();
+        Draw5();
+    });
+
+    function randomNum(minNum, maxNum) {
+        switch (arguments.length) {
+            case 1:
+                return parseInt(Math.random() * minNum + 1, 10);
+                break;
+            case 2:
+                return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+                break;
+            default:
+                return 0;
+                break;
+        }
+    }
+
+    function Setxygxl() {
+        $("#xv1").html(randomNum(12223, 18223));
+        $("#xv2").html(randomNum(55000, 86000));
+        $("#xv3").html(randomNum(12717, 32717));
+        $("#xv4").html(randomNum(180, 300));
+    }
+
+</script>
+
+</html>

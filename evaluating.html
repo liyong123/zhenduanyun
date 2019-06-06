@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/evaluating.css">
+    <title>评测页面</title>
+</head>
+
+<body>
+    <div class="headerH">
+        <div class="header headLogoBlue bgWhite">
+            <div class=" w1200">
+                <div class="headLogo">
+                    <label>
+                        <img src="./images/logo_blue.png" /> 诊断云
+                    </label>
+                </div>
+                <div class="headNav">
+                    <ul>
+                        <li>
+                            <a href="./index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="./knowmore.html">了解诊断</a>
+                        </li>
+                        <li>
+                            <a href="./modallib.html">诊断模型库</a>
+                        </li>
+                        <li class="navOn">
+                            <a href="./list.html">诊断服务</a>
+                        </li>
+                        <li>
+                            <a href="./map.html">诊断服务地图</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">关于我们</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="headUser yesSessionid showBox">
+                    <div class="headUser_name">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <span></span>
+                    </div>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="headUser hide noSessionid">
+                    <a href="./login.html" class="alogin">登录</a>
+                </div>
+                <div class="signOut">
+                    <i class="fa fa-caret-up" aria-hidden="true"></i>
+                    <ul>
+                        <li>
+                            <a href="./mine.html">我的诊断</a>
+                        </li>
+                        <li>
+                            <a id="comment">我要点评</a>
+                        </li>
+                        <li>
+                            <a id="feedback">意见反馈</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" id="outLogin">退出</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <main class="content">
+        <p>
+            <span id="type"> </span>
+            <span id="type_detail"></span>
+        </p>
+        <div id="topics">
+
+        </div>
+        <div style="width: 100%;text-align: center;color: red;margin-top: 10px;" id="hintss">您尚未答题，请答完本题再进入下一页！</div>
+
+
+    </main>
+    <div class="footer_white">
+        <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+        <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+    </div>
+    <!--弹框 下一题模态框-->
+    <!-- Modal -->
+    <div class="modal fade" id="next_question_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #eff2fe;">
+                    <h4 class="modal-title" id="myModalLabel" style="background-color: #eff2fe;"><img src="./img/reminder_03.png" alt="" style="margin-right: 10px;">提示</h4>
+                </div>
+                <div class="modal-body" style="text-align: center;padding-bottom: 70px;">
+                    <p id="hint">贵企业智能制造成熟度，<span id="standard"> <span id="jiebie1">已规划级达标</span>，是否继续？</span> <span id="standard_no">不达标！</span></p>
+                    <button id="next_cancel" data-dismiss="modal" data-toggle="modal" data-target="#quxiao">取消</button>
+                    <button id="next_continue" data-dismiss="modal">继续</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 上一题模态框-->
+    <div class="modal fade" id="pre_question_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #eff2fe;">
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                    <h4 class="modal-title" id="myModalLabel" style="background-color: #eff2fe;"><img src="./img/reminder_03.png" alt="" style="margin-right: 10px;">提示</h4>
+                </div>
+                <div class="modal-body" style="text-align: center;padding-bottom: 70px;">
+                    <p id="hint">是否放弃本次诊断？</p>
+                    <button id="pre_cancel" data-dismiss="modal">是</button>
+                    <button id="pre_continue" data-dismiss="modal">否</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--取消-->
+    <!-- Modal -->
+    <div class="modal fade" id="quxiao" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #eff2fe;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel" style="background-color: #eff2fe;"><img src="./img/reminder_03.png" alt="" style="margin-right: 10px;">提示</h4>
+                </div>
+                <div class="modal-body" style="text-align: center;padding-bottom: 70px;">
+                    <button id="cancel" data-dismiss="modal">取消</button>
+                    <button id="continue" data-dismiss="modal">继续</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="footer_white" style="position: relative;top: 30px;">
+        <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+        <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+    </div>-->
+</body>
+<script src="./lib/jquery.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/evaluating.js"></script>
+<script>
+    if (sessionid == null) {
+        location.href = "./index.html";
+    }
+</script>
+
+</html>

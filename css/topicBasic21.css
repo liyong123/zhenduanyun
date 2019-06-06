@@ -1,0 +1,190 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/bgn4@1x.jpeg');
+    background-size: 100% 100%;
+}
+
+.content {
+    width: 100%;
+}
+
+.content_basic {
+    width: 1200px;
+    min-height: 600px;
+    margin: 0 auto;
+    padding: 60px 0 0 0;
+    color: #333333;
+}
+
+.title_type {
+    line-height: 50px;
+}
+
+.title_type>span {
+    color: #c2c2c1;
+}
+
+.basic_content {
+    padding: 30px 157px;
+    width: 1200px;
+    background-color: #ffffff;
+}
+
+.title_top {
+    width: 100%;
+    line-height: 50px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.input_item {
+    width: 672px;
+    line-height: 30px;
+    padding: 10px 0;
+    margin: 0 auto;
+}
+
+.input_item>div {
+    margin: 25px 0;
+    line-height: 40px;
+}
+
+.row {
+    text-align: right;
+}
+
+.bottom_button {
+    width: 778px;
+    line-height: 60px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.bottom_button>div {
+    display: inline-block;
+    width: 380px;
+    border: 1px solid #7e91cb;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bottom_button>div:nth-child(1) {
+    margin-right: 5px;
+    color: #7e91cb;
+}
+
+.bottom_button>div:nth-child(1):hover {
+    border: 1px solid #24d3f7;
+    color: #24d3f7;
+}
+
+.bottom_button>div:nth-child(1):active {
+    border: 1px solid #2a85cf;
+    color: #2a85cf;
+}
+
+.bottom_button>div:nth-child(2) {
+    margin-left: 5px;
+    color: #ffffff;
+    background-color: #7e91cb;
+}
+
+.bottom_button>div:nth-child(2):hover {
+    background-color: #24d3f7;
+    border: 1px solid #24d3f7;
+}
+
+.bottom_button>div:nth-child(2):active {
+    background-color: #2a85cf;
+    border: 1px solid #2a85cf;
+}
+
+.hint {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: red;
+    text-align: center;
+}
+
+.col-md-10,
+.col-md-4 {
+    text-align: left;
+}
+
+
+/*设置input的placeholder的样式*/
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #d0d0d0;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #d0d0d0;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #d0d0d0;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #d0d0d0;
+}
+
+.must_fill_in {
+    display: inline-block;
+    width: 10px;
+    text-align: left;
+    color: red;
+}
+
+
+/*模糊查询*/
+.second select {  
+    width: 11%;  
+    height: 106px;  
+    margin: 0px;  
+    outline: none;  
+    border: 1px solid #999;  
+    margin-top: 31px;  
+}  
+.second input {  
+    width: 167px;  
+    top: 9px;  
+    outline: none;  
+    border: 0pt;  
+    position: absolute;  
+    line-height: 30px;  
+    left: 8px;  
+    height: 30px;  
+    border: 1px solid #999;  
+}  
+.second ul {  
+    position: absolute;  
+    top: 27px;  
+    border: 1px solid #999;  
+    left: 8px;  
+    width: 125px;  
+    line-height: 16px;  
+}  
+.ul li{  
+    list-style: none;  
+    width: 161px;  
+    /* left: 15px; */  
+    margin-left: -40px;  
+    font-family: 微软雅黑;  
+    padding-left: 4px;  
+}  
+.blue {   
+    background:#1e91ff;   
+} 
+
+.makeupCoSe{
+    position: absolute;
+    z-index:10;
+}

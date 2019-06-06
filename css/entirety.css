@@ -1,0 +1,311 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    margin: 0 auto;
+    width: 1200px;
+    height: 100%;
+}
+
+.consequence h1 {
+    font-size: 30px;
+    color: #494b3d;
+    line-height: 80px;
+    margin: 0;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.headline {
+    margin-top: 30px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #535353;
+}
+
+.grade {
+    width: 100%;
+    text-align: center;
+    color: #9B9B9B;
+    font-size: 14px;
+}
+
+.grade>p:nth-child(2) {
+    line-height: 60px;
+    font-size: 48px;
+}
+
+.heighter {
+    height: 540px;
+}
+
+.con_detail {
+    position: relative;
+    height: 540px;
+    overflow: hidden;
+    line-height: 26px;
+}
+
+.score {
+    position: absolute;
+    top: 220px;
+    font-size: 68px;
+    line-height: 100px;
+    width: 390px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.score-title {
+    position: absolute;
+    top: 183px;
+    color: #f2f0ff;
+    line-height: 26px;
+    font-size: 26px;
+    text-align: center;
+    width: 390px;
+}
+
+.leftCon {
+    position: absolute;
+    top: 30px;
+}
+
+.rightCon {
+    position: absolute;
+    top: 30px;
+    padding-left: 610px;
+    color: #484b3b;
+}
+
+.rightCon .rc-row {
+    line-height: 34px;
+}
+
+.rightCon label {
+    color: #d0d0d0;
+}
+
+.last-label {
+    line-height: 42px;
+    margin-top: 27px;
+}
+
+.rightCon .rc-value {
+    display: inline-block;
+    width: 165px;
+    padding-left: 5px;
+}
+
+.hr-line {
+    background: #f7fafa;
+    height: 44px;
+}
+
+.location {
+    /*padding-left: 7%;*/
+    padding-right: 8%;
+    padding-top: 60px;
+    width: 100%;
+}
+
+.loc_title {
+    font-size: 24px;
+    color: #575758;
+    margin-bottom: 3%;
+}
+
+.loc_title p {
+    font-size: 14px;
+    text-align: justify;
+    margin-top: 33px;
+    padding-right: 5%;
+    color: #A8A9A9;
+    text-indent: 30px;
+    width: 540px;
+}
+
+#det_score {
+    /*text-anchor: middle;*/
+}
+
+.hrrs {
+    width: 50px;
+    height: 12px;
+    margin: 10px 0;
+    background-color: #6F8FF2;
+}
+
+.loc_detail {
+    text-align: justify;
+    margin-top: 30px;
+    padding-right: 10%;
+    color: #A8A9A9;
+    text-indent: 30px;
+    width: 50%;
+    float: left;
+}
+
+.diagram {
+    width: 50%;
+    height: 370px;
+    float: left;
+}
+
+.diagram .dig-title {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.diagram hr {
+    height: 2px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.company,
+.industry,
+.region {
+    display: inline-block;
+    width: 100%;
+}
+
+#company,
+#industry,
+#region {
+    width: 90%;
+    height: 320px;
+    margin: -30px 5% 50px 5%;
+}
+
+.detailed_results {
+    margin-top: 45px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.project,
+.standard,
+.integration {
+    width: 1200px;
+    margin: 0 auto;
+    background: #f7f9fb;
+    margin-bottom: 3%;
+    display: table;
+}
+
+.project{
+    border: 1px solid #c3c7d0;
+}
+
+.standard {
+    background-color: #F7F9FB;
+}
+
+.left {
+    width: 15%;
+    display: table-cell;
+    background: #eef1fc;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+    width: 55%;
+    margin-top: 1px;
+    padding: 0 3%;
+}
+
+.right {
+    padding: 2% 0;
+    display: table-cell;
+    width: 30%;
+    height: 300px;
+}
+
+.measure {
+    width: 70%;
+    line-height: 40px;
+    font-size: 24px;
+    background-color: #c8b3f2;
+    border-radius: 8px;
+    color: #ffffff;
+    text-align: center;
+    margin: 2% auto;
+}
+
+.middle>p {
+    margin-top: 10px;
+}
+
+.scores {
+    /* width: 100px; */
+    line-height: 40px;
+    font-size: 40px;
+    /* color: #01ACED; */
+    text-align: center;
+    font-weight: bold;
+}
+
+.measure_name {
+    /* width: 100px; */
+    font-size: 16px;
+    color: #333333;
+    text-align: center;
+    margin: 2% 0 15% 0;
+}
+
+#arrow {
+    /* transform-origin: 190px 221px;  */
+    display: none;
+}
+
+.middleScore {
+    width: 100%;
+    padding-bottom: 2%;
+    border-bottom: 1px solid #ccc;
+}
+
+.middleScore dl {
+    float: left;
+    width: 16%;
+    text-align: center;
+}
+
+.s8 dl {
+    width: 12.5%;
+}
+
+.middleScore dl dt {
+    font-size: 20px;
+    font-weight: initial;
+    margin-bottom: 1%;
+}
+
+.middleScore dl dd {
+    font-size: 12px;
+    color: #333;
+}
+
+.bColor {
+    color: #01ACED;
+}
+
+.yColor {
+    color: #EFA04F;
+}
+
+.pageNext{page-break-after: always;}
+

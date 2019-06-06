@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./lib/animate.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/zd.css">
+    <link rel="stylesheet" href="./css/kunshan.css">
+    <title>诊断服务地图</title>
+
+</head>
+
+<body>
+    <div class="bgBlue" style="min-height:100%;">
+        <div class="headerH">
+            <div class="header bgBlue">
+                <div class="w1200 headLogoWhite">
+                    <div class="headLogo">
+                        <label>
+                            <img src="./images/logo_white.png" /> 诊断云
+                        </label>
+                    </div>
+                    <div class="headNav">
+                        <ul>
+                            <li>
+                                <a href="./index.html">首页</a>
+                            </li>
+                            <li>
+                                <a href="./knowmore.html">了解诊断</a>
+                            </li>
+                            <li>
+                                <a href="./modallib.html">诊断模型库</a>
+                            </li>
+                            <li>
+                                <a href="./list.html">诊断服务</a>
+                            </li>
+                            <li class="navOn">
+                                <a href="./map.html">诊断服务地图</a>
+                            </li>
+                            <li>
+                                <a href="./about.html">关于我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="headUser yesSessionid showBox">
+                        <div class="headUser_name">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            <span></span>
+                        </div>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="headUser hide noSessionid">
+                        <a href="./login.html" class="alogin">登录</a>
+                    </div>
+                    <div class="signOut">
+                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                        <ul>
+                            <li>
+                                <a href="./mine.html">我的诊断</a>
+                            </li>
+                            <li>
+                                <a id="comment">我要点评</a>
+                            </li>
+                            <li>
+                                <a id="feedback">意见反馈</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" id="outLogin">退出</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main1 content">
+            <div class="container-fluid main">
+                <div class="row" style="margin-top: 30px">
+                    <div class="col-xs-3 wow bounceInLeft" data-wow-delay="1s">
+                        <div class="model-box1" style="height:470px;">
+                            <div class="model-box1-title">
+                                <div>健康五维分析</div>
+                            </div>
+                            <div id="draw1" style="height:398px">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6 wow bounceInDown">
+                        <div id="china-map" style="height:470px;">
+
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 wow bounceInRight" data-wow-delay="1s">
+                        <div class="model-box1" style="height:200px;">
+                            <div class="model-box1-title2">效益贡献力</div>
+
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-4 barnumber-title">增加值:</div>
+                                    <div class="col-xs-8">
+                                        <div class="barnumber" id="xv1">
+                                            14223
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-4 barnumber-title">利润总额:</div>
+                                    <div class="col-xs-8">
+                                        <div class="barnumber" id="xv2">
+                                            56000
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-4 barnumber-title">税收总额:</div>
+                                    <div class="col-xs-8">
+                                        <div class="barnumber" id="xv3">
+                                            22717
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-4 barnumber-title">年均就业人数</div>
+                                    <div class="col-xs-8">
+                                        <div class="barnumber" id="xv4">
+                                            200
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="model-box1" style="height:260px;">
+                            <div class="model-box1-title">
+                                <div>自主创新力</div>
+                            </div>
+
+                            <div id="draw6" style="height:214px">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 wow bounceInUp" data-wow-delay="1.5s">
+                        <div class="model-box1" style="height:246px;">
+                            <div class="model-box1-title">
+                                <div>产值分析</div>
+                            </div>
+
+                            <div id="draw2" style="height:194px">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 wow bounceInUp" data-wow-delay="2s">
+                        <div class="model-box1" style="height:246px;">
+                            <div class="model-box1-title">
+                                <div>平衡性因素</div>
+                            </div>
+
+                            <div id="draw3" style="height:194px">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 wow bounceInUp" data-wow-delay="2.5s">
+                        <div class="model-box1" style="height:246px;">
+                            <div class="model-box1-title">
+                                <div>成熟度</div>
+                            </div>
+
+                            <div id="draw4" style="height:194px">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 wow bounceInUp" data-wow-delay="3s">
+                        <div class="model-box1" style="height:246px;">
+                            <div class="model-box1-title">
+                                <div>产业GDP比重</div>
+                            </div>
+
+                            <div id="draw5" style="height:194px">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="kunshan"></div>
+    <div id="kunshanMap">
+        <div id="company">
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+        <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+    </div>
+</body>
+<script src="./lib/jquery.js"></script>
+<script src="./js/config.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./lib/wow.min2.js"></script>
+<script src="./js/map/echarts.js"></script>
+<script src="./js/map/china.js"></script>
+<script src="./js/map/map.js"></script>
+<script src="./js/map/jkww.js"></script>
+<script src="./js/map/czfx.js"></script>
+<script src="./js/map/phxys.js"></script>
+<script src="./js/map/csd.js"></script>
+<script src="./js/map/gdp.js"></script>
+<script src="./js/map/zzcx.js"></script>
+
+<script>
+    $(function () {
+        new WOW().init();
+        DrawMap();
+        Draw1();
+        Draw2();
+        Draw3();
+        Draw4();
+        Draw5();
+        Draw6();
+
+
+        kunShanAnim();
+    });
+
+    function randomNum(minNum, maxNum) {
+        switch (arguments.length) {
+            case 1:
+                return parseInt(Math.random() * minNum + 1, 10);
+                break;
+            case 2:
+                return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+                break;
+            default:
+                return 0;
+                break;
+        }
+    }
+
+    function Setxygxl() {
+        $("#xv1").html(randomNum(12223, 18223));
+        $("#xv2").html(randomNum(55000, 86000));
+        $("#xv3").html(randomNum(12717, 32717));
+        $("#xv4").html(randomNum(180, 300));
+    }
+
+    function createCompanyTable() {
+        let companyNameList = [
+            '昆山龙腾光电有限公司',
+            '江苏日久光电股份有限公司',
+            '苏州拓显光电材料有限公司',
+            '奇华光电（昆山）股份有限公司',
+            '金箭印刷科技（昆山）有限公司',
+            '昆山汇美塑胶模具有限公司',
+            '昆山鑫昌泰模具科技有限公司',
+            '江苏上汽汽车变速器有限公司',
+            '昆山市韦睿医疗科技有限公司',
+            '江苏新铁重工装备有限公司',
+            '昆山金运新材料科技有限公司',
+            '苏州昀冢电子科技有限公司',
+            '昆山鸿嘉骏电子科技有限公司',
+            '永信药品工业（昆山）股份有限公司',
+            '江苏立讯机器人有限公司',
+            '昆山鸣朋纸业有限公司',
+            '大同齿轮（昆山）有限公司',
+            '昆山同寅兴业机电制造有限公司',
+            '昆山拓安塑料制品有限公司',
+            '昆山誉球模塑有限公司',
+            '苏州飞宇精密科技股份有限公司',
+            '苏州昆仑重型装备制造有限公司',
+            '江苏恒源机械制造有限公司',
+            '昆山帕捷汽车零部件有限公司',
+            '翊腾电子科技（昆山）有限公司',
+            '国轩新能源（苏州）股份有限公司',
+            '昆山宏致电子有限公司',
+            '昆山麦格纳汽车系统有限公司',
+            '马斯特模具(昆山）有限公司',
+            '江苏中信博新能源科技股份有限公司',
+            '昆山新至升塑胶电子有限公司',
+            '益海嘉里（昆山）食品工业有限公司',
+            '竞陆电子（昆山）有限公司',
+            '昆山市张浦彩印厂',
+            '昆山科森科技股份有限公司',
+            '环鸿电子(昆山)有限公司',
+            '定颖电子（昆山）有限公司',
+            '日月光半导体（昆山）有限公司',
+            '圣美精密工业（昆山）有限公司',
+            '浦项（苏州）汽车配件制造有限公司',
+            '盛旺汽车零部件（昆山）有限公司',
+            '汉达精密电子（昆山）有限公司',
+            '富翔精密工业(昆山)有限公司',
+        ]
+
+        let count = 1
+        for (const iterator of companyNameList) {
+            if (count > 3) {
+                $("#company").append(
+                    `
+            <div >
+            <div style="display: inline-block;width: 80%;">${iterator}</div>
+            <div style="display: inline-block;width: 15%;"><img src='./images/yes_d.png'/></div>
+            </div>
+            `
+                )
+            } else {
+                $("#company").append(
+                    `
+                <div >
+                <div style="display: inline-block;width: 80%;">${iterator}</div>
+                <div style="display: inline-block;width: 15%;"><img src='./images/no_d.png'/></div>
+                </div>
+                `
+                )
+            }
+
+            count++;
+        }
+
+    }
+
+    function kunShanAnim() {
+
+        createCompanyTable();
+
+        const animDuration = 500;
+        const showFlayDelay = 1000;
+
+        let flag = $("#kunshan");
+        let mapMask = $("#kunshanMap");
+        let chinaMap = $("#china-map");
+
+        flag.click(() => {
+            mapMask.show(1000);
+            flag.hide(animDuration);
+            chinaMap.hide(animDuration);
+        })
+        mapMask.click(() => {
+            mapMask.hide(animDuration);
+            flag.show(animDuration)
+            chinaMap.show(animDuration);
+        })
+
+        setTimeout(() => {
+            flag.show(animDuration);
+        }, showFlayDelay)
+    }
+</script>
+
+</html>

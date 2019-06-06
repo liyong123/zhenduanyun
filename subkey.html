@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>诊断列表</title>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/subkey.css">
+</head>
+
+<body>
+    <div class="headerH">
+        <div class="header bgBlue">
+            <div class="w1200 headLogoWhite">
+                <div class="headLogo">
+                    <label>
+                            <img src="./images/logo_white.png" /> 诊断云
+                        </label>
+                </div>
+                <div class="headNav">
+                    <ul>
+                        <li>
+                            <a href="./index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="./knowmore.html">了解诊断</a>
+                        </li>
+                        <li>
+                            <a href="./modallib.html">诊断模型库</a>
+                        </li>
+                        <li class="navOn">
+                            <a href="./list.html">诊断服务</a>
+                        </li>
+                        <li>
+                            <a href="./map.html">诊断服务地图</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">关于我们</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="headUser yesSessionid showBox">
+                    <div class="headUser_name">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <span></span>
+                    </div>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="headUser hide noSessionid">
+                    <a href="./login.html" class="alogin">登录</a>
+                </div>
+                <div class="signOut">
+                    <i class="fa fa-caret-up" aria-hidden="true"></i>
+                    <ul>
+                        <li>
+                            <a href="./mine.html">我的诊断</a>
+                        </li>
+                        <li>
+                            <a id="comment">我要点评</a>
+                        </li>
+                        <li>
+                            <a id="feedback">意见反馈</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" id="outLogin">退出</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="questionnaireList" class="content">
+        <!--<div class="typeDiao">
+            <img src="./images/list-01.png" alt="">
+            <h4>智能制造成熟度模型（流程型）</h4>
+            <p>模型是一套管理方法论，它能够精炼地描述一个事物的发展过程，通常将其描述为几个有限的成熟级别，每个级别有明确的定义、相应的标准以及实现其的必要条件。从最低级到最高级，各级别之间具有顺序性，每个级别都是前一个级别的进一步完善，同时也是向下一个级别演进的基础，体现了事物从一个层次到下一个层次层层递进不断发展的过程。</p>
+            <span class="typeDiaoText">流程型html</span>
+        </div>
+        <div class="typeDiao">
+            <img src="./images/list-01.png" alt="">
+            <h4>智能制造成熟度模型（流程型）</h4>
+            <p>模型是一套管理方法论，它能够精炼地描述一个事物的发展过程，通常将其描述为几个有限的成熟级别，每个级别有明确的定义、相应的标准以及实现其的必要条件。从最低级到最高级，各级别之间具有顺序性，每个级别都是前一个级别的进一步完善，同时也是向下一个级别演进的基础，体现了事物从一个层次到下一个层次层层递进不断发展的过程。</p>
+
+            <span class="typeDiaoText">离散型html</span>
+        </div>-->
+    </div>
+    <div class="footer">
+        <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+        <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+    </div>
+
+</body>
+<script src="./lib/jquery.min.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./js/config.js"></script>
+<script>
+    $(function () {
+        app.DataRequest(URL + 'questionRoll/getAll', {}, function (err) {}, function (data) {
+            var questionnaireText = '';
+            if (data[0].status == 1) {
+                var questList = data[0].list
+                for (var i = 0; i < questList.length; i++) {
+                    if (questList[i].flag == 2) {
+                        questionnaireText += '<div class="typeDiao">'
+                        questionnaireText += '<img src="' + questList[i].imageUrl + '" alt="">'
+                        questionnaireText += '<h4>' + questList[i].name + '</h4>'
+                        questionnaireText += '<p>' + questList[i].content + '</p>'
+                        questionnaireText += '<span class="typeDiaoText" data-id="' + questList[i].id +
+                            '">' + questList[i].name.split('（')[1].split('）')[0] + '</span>'
+                        questionnaireText += '</div>'
+                    }
+                }
+            } else {
+                questionnaireText = "暂无数据"
+            }
+            $('#questionnaireList').html(questionnaireText)
+
+        })
+    })
+
+    $('#questionnaireList').on('click', '.typeDiaoText', function () {
+        var id = $(this).attr('data-id')
+        var text = $(this).text()
+        var quest = {
+            questionRollId: id,
+            sessionid: sessionid,
+        }
+        app.DataRequest(URL + 'questionRoll/ifItem', quest, function (err) {}, function (data) {
+            if (text == '流程型') {
+                if (data[0].status == 1) {
+                    location.href = './typeLiucheng.html?id=' + id
+                } else {
+                    var questionRollCompany = data[0].questionRollCompany
+                    var qId = questionRollCompany.id
+                    localStorage.setItem('questionRollCompanyId', qId)
+                    if (questionRollCompany.whole == 1) {
+                        location.href = './evaluating.html'
+                    } else {
+                        location.href = './andpro.html'
+                    }
+                }
+            }
+            if (text == '离散型') {
+                if (data[0].status == 1) {
+                    location.href = './typeLisan.html?id=' + id
+                } else {
+                    var questionRollCompany = data[0].questionRollCompany
+                    var qId = questionRollCompany.id
+                    localStorage.setItem('questionRollCompanyId', qId)
+                    if (questionRollCompany.whole == 1) {
+                        location.href = './evaluating.html'
+                    } else {
+                        location.href = './andpro.html'
+                    }
+                }
+            }
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,353 @@
+#kunshan{
+    width: 98px;
+    height: 98px;
+    
+    opacity: .9;   
+    position: absolute;
+    left: 59%;
+    float: left;
+    z-index: 100000;
+    top: 340px;
+    border-radius: 50%;
+    display: none;
+    background-image: url('../images/map_kunshan_position.png');
+}
+
+#kunshanMap{
+    width: 45.8%;
+    height: 470px;
+    top: 100px;
+    left: 26.8%;
+    position: absolute; 
+    background-image: url('../images/map_kunshan.png');
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    display: none;
+}
+
+#companyTable{
+    background-color: #2446A0;
+    border-radius: 4px;
+    border:  1px #87C7EF solid;
+ 
+}
+#companyTable td{
+    width: 200px;
+}
+#companyHeader{
+ padding-bottom: 20px;
+  border-bottom: 1px solid #87C7EF;
+}
+::-webkit-scrollbar {display:none}
+#company{
+    width: 28%;
+    position: relative;
+    left: 57%;
+    height: 365px;;
+    margin-top: 75px;
+    font-size: 12px;
+    line-height: 40px;
+    /* background: #87C7EF; */
+    /* opacity: 0.1; */
+    overflow: auto;
+}
+
+
+.lightBlue{
+    color:#a6d7ff;
+    font-size: 12px;
+}
+.stringYi{
+    color: white;
+    position: relative;
+    top: 4px;
+}
+.regionName{
+color: #d2f5ff;
+font-weight:bold;
+font-size: 12px;
+}
+
+.cropWrapper{
+    margin-top: 20px;
+}
+@media screen  and (max-width: 1439px) {
+   
+    .cropWrapper li{
+        padding-left: 5px;
+        margin-bottom: 16px;
+    }
+    .cropWrapper li > span:nth-child(1){
+        background: #2446A0;
+        border-radius: 50%;
+        color: #a6d7ff;
+        width: 16px;
+        display: inline-block;
+        text-align: center;
+        margin-right: 16px;
+    
+    }
+     
+    .leftTopTitle{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    .leftTopTitle >span:nth-child(1){
+        color: #6cdfff;
+    }
+    
+    
+    .leftTopTitle >span:nth-child(2){
+        position: relative;
+        top: 2px;
+        width: 20%;
+    }
+    /*.cropDiag{
+        letter-spacing:1px;
+        display: inline-block;
+        position: relative;
+        top: -5px;
+        margin-right: 5%;
+    }
+    .cropNum{
+        background-color: #204d8a;
+        color: #62d0f1;
+        width: 60%;
+        text-align: right;
+        display: inline-block;
+        height: 28px;
+        border-radius: 4px;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 25px;
+        padding-right: 15px;
+    }*/
+    /*.chengShudu{
+        height: 30px;
+        top:432px !important;
+        position: absolute !important;
+        overflow: hidden !important;
+        padding-left: 38px !important;
+        width: 100%;
+    }
+    .chengShudu >span:nth-child(2){
+        width: auto !important;
+    }
+       .QiYeJiXiao{
+        height: 30px;
+        top: 700px !important;
+        position: absolute !important;
+        overflow: hidden !important;
+        width: 100%;
+        padding-left: 38px !important;
+       }
+       .QiYeJiXiao >span:nth-child(2){
+           width: auto !important;
+       }*/
+}
+
+
+
+
+
+
+@media screen and (min-width:1440px) and (max-width: 1599px) {
+    .cropWrapper li{
+        padding-left: 0px;
+        margin-bottom: 16px;
+    }
+ 
+    .cropWrapper li > span:nth-child(1){
+        background: #2446A0;
+        border-radius: 50%;
+        color: #a6d7ff;
+        width: 16px;
+        display: inline-block;
+        text-align: center;
+        margin-right: 16px;
+    
+    }
+     
+    .leftTopTitle{
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .leftTopTitle >span:nth-child(1){
+        color: #6cdfff;
+    }
+    
+    
+    .leftTopTitle >span:nth-child(2){
+        position: relative;
+        top: 2px;
+        width: 20%;
+    }
+    /*.cropDiag{
+        letter-spacing:1px;
+        display: inline-block;
+        position: relative;
+        top: -5px;
+        margin-right: 5%;
+    }
+    .cropNum{
+        background-color: #204d8a;
+        color: #62d0f1;
+        width: 65%;
+        text-align: right;
+        display: inline-block;
+        height: 28px;
+        border-radius: 4px;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 25px;
+        padding-right: 15px;
+    }*/
+
+    /*.chengShudu{
+        top: -44px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        padding-left: 38px !important;
+        padding-right: 46px;
+       }
+       .chengShudu >span:nth-child(2){
+        width: 150px !important;
+    }
+       .QiYeJiXiao{
+        top: -44px;
+        position: relative;
+        overflow: hidden;
+       }
+       .QiYeJiXiao >span:nth-child(2){
+        width: 150px !important;
+    }*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1600px) and (max-width: 4000px) {
+    .cropWrapper li{
+        padding-left: 0px;
+        margin-bottom: 16px;
+    }
+    .cropWrapper li > span:nth-child(1){
+        background: #2446A0;
+        border-radius: 50%;
+        color: #a6d7ff;
+        width: 16px;
+        display: inline-block;
+        text-align: center;
+        margin-right: 16px;
+    
+    }
+     
+    .leftTopTitle{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    
+    .leftTopTitle >span:nth-child(1){
+        color: #6cdfff;
+    }
+    
+    
+    .leftTopTitle >span:nth-child(2){
+        position: relative;
+        top: 2px;
+        width: 20%;
+    }
+    /*.cropDiag{
+        letter-spacing:1px;
+        display: inline-block;
+        position: relative;
+        top: -5px;
+        margin-right: 5%;
+    }
+    .cropNum{
+        background-color: #204d8a;
+        color: #62d0f1;
+        width: 70%;
+        text-align: right;
+        display: inline-block;
+        height: 28px;
+        border-radius: 4px;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 25px;
+        padding-right: 15px;
+    }*/
+
+   /* .chengShudu{
+        height: 30px;
+        top:432px !important;
+        position: absolute !important;
+        overflow: hidden !important;
+        padding-left: 38px !important;
+        width: 100%;
+        padding-right: 46px;
+       }
+       .chengShudu >span:nth-child(2){
+        width: 180px !important;
+    }
+       .QiYeJiXiao{
+        height: 30px;
+        top: 700px !important;
+        position: absolute !important;
+        overflow: hidden !important;
+        width: 100%;
+        padding-right: 46px;
+        padding-left: 38px !important;
+       }
+       .QiYeJiXiao >span:nth-child(2){
+        width: 150px !important;
+    }*/
+}
+
+.cropDiag{
+    vertical-align: text-top;
+    display : inline-block;
+    width : 60%;
+    font-size: 12px;
+    line-height : 28px;
+}
+.cropNum{
+    vertical-align: text-top;
+    display : inline-block;
+    width : 40%;
+    line-height : 28px;
+    background-color: #204d8a;
+    color:#62d0f1;
+    font-weight: bold;
+    border-radius : 4px;
+    text-align: right;
+    padding-right : 20px;
+    font-size : 24px;
+}
+
+.chengShudu,.QiYeJiXiao{
+    margin : -45px 20px 0 40px;
+    font-size : 0px;
+}
+
+.ZhuCeQiYeShu{
+    font-size : 0px;
+    margin : 30px 20px 0 40px;
+}
+
+
+#china-map{
+    /* background: url('../images/kunshanditu.png') no-repeat center center; */
+     
+}

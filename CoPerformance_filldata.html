@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./lib/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="./lib/animate.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/buildModel.css">
+    <title>企业绩效评价诊断</title>
+
+</head>
+
+<body>
+    <div class="bgWhite">
+        <div class="headerH">
+            <div class="header bgWhite headLogoBlue">
+                <div class="w1200 headLogoWhite">
+                    <div class="headLogo">
+                        <label>
+                        <img src="./images/logo_white.png"/> 诊断云
+                    </label>
+                    </div>
+                    <div class="headNav">
+                        <ul>
+                            <li>
+                                <a href="./index.html">首页</a>
+                            </li>
+                            <li>
+                                <a href="./knowmore.html">了解诊断</a>
+                            </li>
+                            <li>
+                                <a href="./modallib.html">诊断模型库</a>
+                            </li>
+                            <li class="navOn">
+                                <a href="./list.html">诊断服务</a>
+                            </li>
+                            <li>
+                                <a href="./map.html">诊断服务地图</a>
+                            </li>
+                            <li>
+                                <a href="./about.html">关于我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="headUser yesSessionid hide showBox">
+                        <div class="headUser_name">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            <span></span>
+                        </div>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="headUser noSessionid">
+                        <a href="./login.html" class="alogin">登录</a>
+                        <a href="./register.html" class="aregister">免费注册</a>
+                    </div>
+                    <div class="signOut">
+                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                        <ul>
+                            <li>
+                                <a href="./mine.html">我的诊断</a>
+                            </li>
+                            <li>
+                                <a id="comment">我要点评</a>
+                            </li>
+                            <li>
+                                <a id="feedback">意见反馈</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" id="outLogin">退出</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content w1200">
+            <div class="fillTitle">企业绩效评价诊断</div>
+        </div>
+        <div class="fillData w1200">
+            <div class="fillBtns">
+                <div class="fillBtnItem">
+                    <a class="btn btn-primary" onclick="fileExcel()" id="fileBtn">下载Excel</a>
+                    <p class="text-warning">您可以先下载Excel模板，填写完成后再上传。</p>
+                </div>
+                <div class="fillBtnItem">
+                    <form id="upload" enctype="multipart/form-data" method="post">
+                        <a class="upload">
+                        上传Excel
+                        <input type="file" accept=".xls,.xlsx" class="change" name="file" id="pic"
+                               onchange="uploadPic()"/>
+                    </a>
+                    </form>
+                    <p class="text-warning">请先下载Excel模板，填写完成后再上传</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="fillCenter">
+                <div class="bMConTitle">企业绩效模型数据填写</div>
+                <div class="bMConSelect">
+                    <span class="bMC_SName">数据年份选择：</span>
+                    <div class="bMC_Sselect">
+                        <input type="text" class="form-control form_datetime" id="time" value="" placeholder="请选择年份">
+                        <span class="text-danger timeTip hide">（请选择建模数据年份）</span>
+                    </div>
+                </div>
+                <div class="bMConSelect inputList">
+                    <!--<div class="form-horizontal">-->
+                    <!--<div class="filldataName">资产负债表</div>-->
+                    <!--<div class="form-group">-->
+                    <!--<label class="col-sm-3 control-label">name</label>-->
+                    <!--<div class="col-sm-8">-->
+                    <!--<input type="text" class="form-control" placeholder="name">-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                    <!--<label class="col-sm-3 control-label">name</label>-->
+                    <!--<div class="col-sm-8">-->
+                    <!--<input type="text" class="form-control" placeholder="name">-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="clearfix"></div>-->
+                    <!--</div>-->
+                </div>
+                <div class="fillCenterBtn">
+                    <a href="javaScript:void(0);" class="btn btn-primary" onclick="nextBuildModel()">生 成</a>
+                    <a href="./list.html" class="btn btn-default">取 消</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="tipModalData">
+            <div class="modal-dialog" style="width: 450px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">
+                            <i class="modelTitleIcon"></i>提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div style="color: #c7254e">请选择数据年份！</div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:void(0);" class="btn  btn-primary" data-dismiss="modal">确 定</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="tipModalSuccess">
+            <div class="modal-dialog" style="width: 450px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">
+                            <i class="modelTitleIcon"></i>提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div style="color: #198764">上传成功！</div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:void(0);" class="btn  btn-primary" data-dismiss="modal">确 定</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="tipModalFail">
+            <div class="modal-dialog" style="width: 450px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">
+                            <i class="modelTitleIcon"></i>提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div style="color: #c7254e">上传失败！请确认上传文件是否是本网站下载的文件！</div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:void(0);" class="btn btn-primary" data-dismiss="modal">确 定</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_white">
+        <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+        <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+    </div>
+</body>
+<script src="./lib/jquery.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./lib/bootstrap-datetimepicker.min.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/filldata.js"></script>
+
+</html>

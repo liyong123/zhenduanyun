@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>21维度基本信息</title>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/topicBasic21.css">
+</head>
+
+<body>
+    <div class="headerH">
+        <div class="header headLogoBlue bgWhite">
+            <div class=" w1200">
+                <div class="headLogo">
+                    <label>
+                        <img src="./images/logo_blue.png" /> 诊断云
+                    </label>
+                </div>
+                <div class="headNav">
+                    <ul>
+                        <li>
+                            <a href="./index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="./knowmore.html">了解诊断</a>
+                        </li>
+                        <li>
+                            <a href="./modallib.html">诊断模型库</a>
+                        </li>
+                        <li class="navOn">
+                            <a href="./list.html">诊断服务</a>
+                        </li>
+                        <li>
+                            <a href="./map.html">诊断服务地图</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">关于我们</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="headUser yesSessionid showBox">
+                    <div class="headUser_name">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <span></span>
+                    </div>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="headUser hide noSessionid">
+                    <a href="./login.html" class="alogin">登录</a>
+                </div>
+                <div class="signOut">
+                    <i class="fa fa-caret-up" aria-hidden="true"></i>
+                    <ul>
+                        <li>
+                            <a href="./mine.html">我的诊断</a>
+                        </li>
+                        <li>
+                            <a id="comment">我要点评</a>
+                        </li>
+                        <li>
+                            <a id="feedback">意见反馈</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" id="outLogin">退出</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <main class="content">
+        <div class="content_basic">
+            <p class="title_type">制造21维度评测<span>&#x3000;>&#x3000;基本信息</span></p>
+            <div class="basic_content">
+                <h3 class="title_top">制造21维度评测——基本信息</h3>
+                <hr>
+                <div class="input_item">
+                    <div class="row">
+                        <div class="col-md-2">评测类型：</div>
+                        <div class="col-md-4">
+                            <p id="evaluating_type"></p>
+                        </div>
+                        <div class="col-md-2"><span class="must_fill_in">*</span>评测日期：</div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control form_datetime" id="homeJxMonth" value="" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"><span class="must_fill_in">*</span>评测人：</div>
+                        <div class="col-md-4">
+                            <input type="text" id="people_name" class="form-control" value="" placeholder="输入评测人姓名(长度<20)" maxlength="20" onkeyup="this.value=this.value.replace(/\s+/g,'')"
+                            />
+                        </div>
+                        <div class="col-md-2"><span class="must_fill_in">*</span>评测职位：</div>
+                        <div class="col-md-4">
+                            <input type="text" id="job" class="form-control" onkeyup="this.value=this.value.replace(/\s+/g,'')" placeholder="请输入职位名称"
+                            />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"><span class="must_fill_in">*</span>评测单位：</div>
+                        <div class="col-md-10">
+                            <!-- oninput="setinput(this);"-->
+                            <input type="text" name="makeupCo" id="makeupCo" class="makeinp form-control" onfocus="setfocus(this)" placeholder="请选择或输入"
+                            />
+                            <select class="form-control" name="makeupCoSe" id="firm_name" onchange="changeF(this)" size="10" style="display:none;"></select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"><span class="must_fill_in">*</span>评测现场：</div>
+                        <div class="col-md-10">
+                            <input type="text" id="evaluating_scene" class="form-control" placeholder="描述评测地点" onkeyup="this.value=this.value.replace(/\s+/g,'')"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom_button">
+                    <div id="return_back">返回</div>
+                    <div id="began_review">开始评测</div>
+                </div>
+                <p class="hint" id="hint"></p>
+            </div>
+        </div>
+        </mian>
+
+        <div class="footer_white">
+            <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+            <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+        </div>
+
+</body>
+<script src="./lib/jquery.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./js/bootstrap-datetimepicker.min.js"></script>
+<script src="./js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="./js/config.js"></script>
+<script>
+    //日期控件
+    $(".form_datetime").datetimepicker({
+        language: 'zh-CN',
+        format: 'yyyy-mm-dd', //显示格式
+        todayHighlight: 1, //今天高亮
+        minView: "month", //设置只显示到月份
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1,
+        autoclose: 1 //选择后自动关闭,
+    });
+
+    let date = new Date();
+    let year = date.getFullYear();
+    let month = date.getMonth() + 1;
+    let day = date.getDate();
+    if (month < 10) {
+        month = "0" + month;
+    }
+    if (day < 10) {
+        day = "0" + day;
+    }
+    let nowDate = year + "-" + month + "-" + day;
+    $(".form_datetime").attr('value', nowDate);
+    // $(".form_datetime").attr('placeholder', nowDate)
+
+    // 设置select的颜色
+    let unSelected = "#999";
+    let selected = "#333";
+    $(function () {
+        $("select").css("color", unSelected);
+        $("option").css("color", selected);
+        $("select").change(function () {
+            let selItem = $(this).val();
+            if (selItem == $(this).find('option:first').val()) {
+                $(this).css("color", unSelected);
+            } else {
+                $(this).css("color", selected);
+            }
+        });
+    })
+
+    // 返回上一步
+    $('#return_back').click(function () {
+        location.href = './list.html'
+    })
+
+
+    // 页面加载
+    let companyList
+    let evaluating_type = 0
+    let evaluatingCompany
+
+    $(function () {
+        $('#hint').text('');
+        companyList = [];
+        let dimen_quest = {
+            evaluatingType: '1',
+            questionRollId: 'WJ006'
+        }
+        app.DataRequest(URL + 'companyEvaluatingRoll/checkAuthority', dimen_quest, function (err) {},
+            function (
+                data) {
+                let companyData = data[0].company;
+                let option_text;
+                if (companyData.specialist == 0) {
+                    $('#evaluating_type').text('企业评测');
+                    $("#firm_name").attr("disabled", true);
+                    $("#makeupCo").val(companyData.name).attr("disabled", true);
+                    evaluatingCompany = companyData.id
+                } else if (companyData.specialist == 1) {
+                    evaluating_type = 1
+                    companyList = data[0].companyList;
+                    $('#evaluating_type').text('专家评测');
+                    for (let i = 0; i < companyList.length; i++) {
+                        companyListArry.push(companyList[i])
+                        if (companyList[i].name) {
+                            option_text += '<option value="' + companyList[i].id + '">' +
+                                companyList[i].name +
+                                '</option>';
+                        }
+                    }
+                    $('#firm_name').html(option_text);
+                }
+            })
+    })
+
+    let companyListArry = [];
+
+    $('#makeupCo').keyup(function () {
+        if (evaluating_type == 1) {
+            $("#firm_name").css({
+                "display": ""
+            });
+            let valuesIN = $(this).val();
+            let option_text =
+                '<option value="" disabled selected style="display:none;color:#d0d0d0;">请输入企业名称</option>';
+            if (valuesIN != null) {
+                for (let i = 0; i < companyList.length; i++) {
+                    //如果字符串中不包含目标字符会返回-1
+                    if (!companyList[i].name || companyList[i].name.indexOf(valuesIN) == -1) {
+                        continue;
+                    } else {
+                        companyListArry.push(companyList[i])
+                        if (companyList[i].name) {
+                            option_text += '<option value="' + companyList[i].id + '">' +
+                                companyList[i].name +
+                                '</option>';
+                        }
+                    }
+                }
+            } else {
+                for (let i = 0; i < companyList.length; i++) {
+                    companyListArry.push(companyList[i])
+                    if (companyList[i].name) {
+                        option_text += '<option value="' + companyList[i].id + '">' +
+                            companyList[i].name +
+                            '</option>';
+                    }
+                }
+            }
+            $('#firm_name').html(option_text);
+        }
+
+    });
+
+    // 模糊查询
+    function changeF(this_) {
+        if (evaluating_type == 1) {
+            $(this_).prev("input").val($(this_).find("option:selected").text());
+            $("#firm_name").css({
+                "display": "none"
+            });
+        }
+    }
+
+    function setfocus(this_) {
+        if (evaluating_type == 1) {
+            $("#firm_name").css({
+                "display": ""
+            });
+        }
+    }
+
+    // 开始评测
+    $('#began_review').click(function () {
+        $('#hint').text('');
+        if (evaluating_type == 1) {
+            evaluatingCompany = $('#firm_name').val();
+        }
+        let quest = {
+            job: $('#job').val(),
+            evaluatingTime: $('#homeJxMonth').val(),
+            evaluatingPeople: $('#people_name').val(),
+            evaluatingAddress: $('#evaluating_scene').val(),
+            evaluatingCompany: evaluatingCompany,
+            questionRollId: 'WJ006'
+        }
+
+
+        if (quest.evaluatingTime == "") {
+            $('#hint').text('评测日期不能为空');
+            return;
+        }
+        if ($('#people_name').val() == "") {
+            $('#hint').text('评测人姓名不能为空');
+            return;
+        }
+        if ($('#people_name').val().length > 20) {
+            $('#hint').text('评测人姓名不能超过二十个字符');
+            return;
+        }
+        if (quest.job == "") {
+            $('#hint').text('评测职位不能为空');
+            return;
+        }
+        if ($('#evaluating_type').text() == '专家评测' && quest.evaluatingCompany == null) {
+            $('#hint').text('评测单位不能为空');
+            return;
+        }
+        if (quest.evaluatingAddress == "") {
+            $('#hint').text('评测现场不能为空');
+            return;
+        }
+
+        app.DataRequest(URL + 'companyEvaluatingRoll/createEvaluating', quest, function (err) {},
+            function (data) {
+                if (data[0].status == 1) {
+                    localStorage.setItem('companyEvaluatingRollID', data[0].companyEvaluatingRoll.id)
+                    location.href = './topic21.html'
+                }
+            })
+    })
+</script>
+
+</html>

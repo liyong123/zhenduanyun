@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./lib/animate.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/zd.css">
+    <link rel="stylesheet" href="./css/kunshan.css">
+    <title>诊断服务地图</title>
+
+</head>
+
+<body>
+    <div class="bgBlue" style="min-height:100%;">
+        <div class="headerH">
+            <div class="header bgBlue">
+                <div class="w1200 headLogoWhite">
+                    <div class="headLogo">
+                        <label>
+                            <img src="./images/logo_white.png" /> 诊断云
+                        </label>
+                    </div>
+                    <div class="headNav">
+                        <ul>
+                            <li>
+                                <a href="./index.html">首页</a>
+                            </li>
+                            <li>
+                                <a href="./knowmore.html">了解诊断</a>
+                            </li>
+                            <li>
+                                <a href="./modallib.html">诊断模型库</a>
+                            </li>
+                            <li>
+                                <a href="./list.html">诊断服务</a>
+                            </li>
+                            <li class="navOn">
+                                <a href="./map.html">诊断服务地图</a>
+                            </li>
+                            <li>
+                                <a href="./about.html">关于我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="headUser yesSessionid showBox">
+                        <div class="headUser_name">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            <span></span>
+                        </div>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="headUser hide noSessionid">
+                        <a href="./login.html" class="alogin">登录</a>
+                    </div>
+                    <div class="signOut">
+                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                        <ul>
+                            <li>
+                                <a href="./mine.html">我的诊断</a>
+                            </li>
+                            <li>
+                                <a id="comment">我要点评</a>
+                            </li>
+                            <li>
+                                <a id="feedback">意见反馈</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" id="outLogin">退出</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main1 content">
+            <div class="container-fluid main">
+                <div class="row" style="margin-top: 30px">
+                    <div class="col-xs-3 wow bounceInLeftCancel" data-wow-delay="1s">
+                        <div class="model-box1" style="height:204px;overflow:hidden;">
+                            <div class="model-box1-title">
+
+                            </div>
+                            <div id="draw1" style="height:204px">
+
+                                <div style="padding:0 40px;padding-top:20px;">
+                                    <div style="letter-spacing:1px">当前坐标位置</div>
+
+                                    <div class="leftTopTitle">
+                                        <span>全国</span>
+                                        <span>CHINA</span>
+                                    </div>
+                                    <hr style="border-top: 1px solid #ffffff21;">
+                                </div>
+                                <div class="ZhuCeQiYeShu">
+                                    <span class="cropDiag" id="registerTitle">注册企业数</span>
+                                    <span id="registerCount" class="cropNum"></span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="model-box1" style="height:256px;">
+                            <div class="model-box1-title">
+                                <div id="intelligenceLegend"> 企业绩效评价</div>
+                            </div>
+                            <div id="draw4" style="height:240px">
+
+                            </div>
+                            <div class="chengShudu">
+                                <span class="cropDiag" id="evaluateTitle">企业绩效评价总数</span>
+                                <span id="achievementsCount" class="cropNum"></span>
+                            </div>
+                        </div>
+
+                        <div class="model-box1" style="height:256px;">
+                            <div class="model-box1-title">
+                                <div id="evaluateLegend">成熟度</div>
+                            </div>
+                            <div id="draw5" style="height:240px">
+
+                            </div>
+                            <div class="QiYeJiXiao">
+                                <span class="cropDiag" id="intelligenceTitle">智能制造成熟度总数</span>
+                                <span id="diagnosisCount" class="cropNum"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6 wow bounceInDownCancel">
+                        <div id="china-map" style="height:736px;">
+
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 wow bounceInRightCancel" data-wow-delay="1s">
+                        <div class="model-box1" style="height:736px; padding-left:24px;">
+                            <div style="font-size:18px;font-weight:bold;">最新入驻企业 :</div>
+
+                            <ul class="cropWrapper">
+                                <li>
+                                    <span>1</span>
+                                    <span>昆山市三利羊毛碳化有限公司</span>
+                                </li>
+                                <li>
+                                    <span>2</span>
+                                    <span>昆山精诚得精密五金模具有限公司</span>
+                                </li>
+                                <li>
+                                    <span>3</span>
+                                    <span>昆山榕增光电科技有限公司</span>
+                                </li>
+                                <li>
+                                    <span>4</span>
+                                    <span>昆山开信精工机械股份有限公司</span>
+                                </li>
+                                <li>
+                                    <span>5</span>
+                                    <span>昆山福智威包装有限公司</span>
+                                </li>
+                                <li>
+                                    <span>6</span>
+                                    <span>昆山上和田五金制品有限公司</span>
+                                </li>
+                                <li>
+                                    <span>7</span>
+                                    <span>昆山禾佳金属制品有限公司</span>
+                                </li>
+                                <li>
+                                    <span>8</span>
+                                    <span>亿源环保包装制品（昆山）有限公司</span>
+                                </li>
+                                <li>
+                                    <span>9</span>
+                                    <span>昆山市祥裕塑料电器有限公司</span>
+                                </li>
+                                <li>
+                                    <span>10</span>
+                                    <span>筹春（昆山）金属表面材料制品有限公司</span>
+                                </li>
+                                <li>
+                                    <span>11</span>
+                                    <span>昆山科力机械有限公司</span>
+                                </li>
+                                <li>
+                                    <span>12</span>
+                                    <span>昆山市源丰铝业有限公司</span>
+                                </li>
+                                <li>
+                                    <span>13</span>
+                                    <span>昆山市恒一毛条厂</span>
+                                </li>
+                                <li>
+                                    <span>14</span>
+                                    <span>昆山天星阀业有限公司</span>
+                                </li>
+                                <li>
+                                    <span>15</span>
+                                    <span>昆山华艺铜业有限公司</span>
+                                </li>
+                                <li>
+                                    <span>16</span>
+                                    <span>昆山周氏电业有限公司</span>
+                                </li>
+                                <li>
+                                    <span>17</span>
+                                    <span>昆山川岛洗涤机械有限公司</span>
+                                </li>
+                                <li>
+                                    <span>18</span>
+                                    <span>昆山鑫多工贸有限公司</span>
+                                </li>
+                                <li>
+                                    <span>19</span>
+                                    <span>昆山亿能电子有限公司</span>
+                                </li>
+                                <li>
+                                    <span>20</span>
+                                    <span>昆山德力康电子科技有限公司</span>
+                                </li>
+                            </ul>
+
+                            <!-- 
+                            潘总需求 需要显示 巴城 淀山湖 共20家
+                            <div class="model-box1-title2" style="text-align: left;margin-bottom: 6px;">
+                                <span class="regionName">KUNSHAN</span>
+                                <span class="stringYi">一</span>
+                                <span class="lightBlue">花桥区</span>
+                            </div>
+                            <ul class="cropWrapper">
+
+
+                                <li>
+                                    <span>3</span>
+                                    <span>奥科宁克（昆山）铝业有限公司</span>
+                                </li>
+                                <li>
+                                    <span>9</span>
+                                    <span>昆山德拉特兰传动科技有限公司</span>
+                                </li>
+                            </ul>
+                            <div class="model-box1-title2" style="text-align: left;margin-bottom: 6px;">
+                                <span class="regionName">KUNSHAN</span>
+                                <span class="stringYi">一</span>
+                                <span class="lightBlue">开发区</span>
+                            </div>
+                            <ul class="cropWrapper">
+                                <li>
+                                    <span>6</span>
+                                    <span>昆山艾博机器人股份有限公司</span>
+                                </li>
+                                <li>
+                                    <span>10</span>
+                                    <span>昆山精讯电子有限公司</span>
+                                </li>
+                            </ul>
+                            <div class="model-box1-title2" style="text-align: left;margin-bottom: 6px;">
+                                <span class="regionName">KUNSHAN</span>
+                                <span class="stringYi">一</span>
+                                <span class="lightBlue">张浦区</span>
+                            </div>
+                            <ul class="cropWrapper">
+                                <li>
+                                    <span>7</span>
+                                    <span>江苏新宁现代物流股份有限公司</span>
+                                </li>
+                                <li>
+                                    <span>11</span>
+                                    <span>迪亚姆展示设备（昆山）有限公司</span>
+                                </li>
+                                <li>
+                                    <span>12</span>
+                                    <span>昆山鸿志德电子科技有限公司</span>
+                                </li>
+                                <li>
+                                    <span>13</span>
+                                    <span>昆山康泰达电子科技有限公司</span>
+                                </li>
+                            </ul>
+                        
+                        
+                            <div class="model-box1-title2" style="text-align: left; margin-bottom: 6px;">
+                                <span class="regionName">KUNSHAN</span>
+                                <span class="stringYi">一</span>
+                                <span class="lightBlue">淀山湖区</span>
+                            </div>
+                            <ul class="cropWrapper">
+                                <li>
+                                    <span>8</span>
+                                    <span>澳帕曼安全织带（昆山）有限公司</span>
+                                </li>
+                            </ul>
+                   -->
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div id="kunshan"></div>
+    <div id="kunshanMap">
+        <div id="company">
+
+        </div>
+    </div>
+    <div class="footer">
+        <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+        <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+    </div>
+</body>
+<script src="./temp/mapMeta.js"></script>
+<script src="./lib/jquery.js"></script>
+<script src="./js/config.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./lib/wow.min2.js"></script>
+<script src="./js/map/echarts.js"></script>
+<script src="./js/map/china.js"></script>
+<script src="./js/map/map.js"></script>
+<script src="./js/map/kscsd.js"></script>
+<script src="./js/map/ksgdp.js"></script>
+
+
+<script>
+    $(function () {
+        new WOW().init();
+
+        let intelligenceValue = 0;
+        for (const item of MAPMETA.intelligence.data) {
+            intelligenceValue += item.value;
+        }
+        let evaluateValue = 0;
+        for (const item of MAPMETA.evaluate.data) {
+            evaluateValue += item;
+        }
+        $("#registerCount").text(MAPMETA.register.value);
+        $("#achievementsCount").text(evaluateValue);
+        $("#diagnosisCount").text(intelligenceValue)
+
+        $("#registerTitle").text(MAPMETA.register.title);
+        $("#intelligenceTitle").text(MAPMETA.intelligence.title);
+        $("#intelligenceLegend").text(MAPMETA.intelligence.legend);
+        $("#evaluateTitle").text(MAPMETA.evaluate.title);
+        $("#evaluateLegend").text(MAPMETA.evaluate.legend);
+
+    });
+
+    function randomNum(minNum, maxNum) {
+        switch (arguments.length) {
+            case 1:
+                return parseInt(Math.random() * minNum + 1, 10);
+                break;
+            case 2:
+                return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+                break;
+            default:
+                return 0;
+                break;
+        }
+    }
+
+    function Setxygxl() {
+        $("#xv1").html(randomNum(12223, 18223));
+        $("#xv2").html(randomNum(55000, 86000));
+        $("#xv3").html(randomNum(12717, 32717));
+        $("#xv4").html(randomNum(180, 300));
+
+    }
+</script>
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'http://echarts.baidu.com/build/dist'
+        }
+    });
+
+    // 使用
+    require(
+        [
+            'echarts',
+            'echarts/chart/map' // 使用中国地图就加载map模块，按需加载
+        ],
+        function (ec) {
+            // 基于准备好的dom，初始化echarts图表
+            var myChart = ec.init(document.getElementById('china-map'));
+
+            option = {
+                dataRange: {
+                    min: 0,
+                    max: 1500,
+                    x: '-1000000',
+                    y: '-1000000',
+                    // 文本，默认为数值文本
+                    calculable: false
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function (a, b) {
+                        if (a[1] == "昆山") {
+                            return a[1] + " : " + a[2];
+                        } else {
+                            return a[1] + " : -";
+                        }
+                    }
+                },
+                series: [{
+                        name: 'mix2',
+                        type: 'map',
+                        mapType: 'china',
+                        roam: false,
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true
+                                }
+                            },
+                        },
+                        data: [{
+                                name: '北京',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '天津',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '上海',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '重庆',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '河北',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '河南',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '云南',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '辽宁',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '黑龙江',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '湖南',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '安徽',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '山东',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '新疆',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '江苏',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '浙江',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '江西',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '湖北',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '广西',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '甘肃',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '山西',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '内蒙古',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '陕西',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '吉林',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '福建',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '贵州',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '广东',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '青海',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '西藏',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '四川',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '宁夏',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '海南',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '台湾',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '香港',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '澳门',
+                                value: Math.round(Math.random() * 1000 + 200)
+                            },
+                            {
+                                name: '南海诸岛',
+                                value: 0,
+                                itemStyle: {
+                                    normal: {
+                                        opacity: 0,
+                                        label: {
+                                            show: false
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        name: 'mix1',
+                        type: 'map',
+                        mapType: 'china',
+                        roam: false,
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true
+                                }
+                            },
+                        },
+                        markPoint: {
+                            symbolSize: 10, // 标注大小，半宽（半径）参数，当图形为方向或菱形则总宽度为symbolSize * 2
+                            itemStyle: {
+                                normal: {
+                                    borderColor: '#fac866',
+                                    borderWidth: 5, // 标注边线线宽，单位px，默认为1
+                                    label: {
+                                        show: false
+                                    }
+                                },
+                                emphasis: {
+                                    borderColor: '#fbff1a',
+                                    borderWidth: 10,
+                                    label: {
+                                        show: false
+                                    }
+                                }
+                            },
+                            data: [{
+                                name: "昆山",
+                                value: MAPMETA.kunshanMapValue
+                            }, ],
+                        },
+                        geoCoord: {
+                            "昆山": [120.95, 31.39],
+                        },
+                        data: []
+                    },
+
+                ]
+            };
+
+
+            // 为echarts对象加载数据 
+            myChart.setOption(option);
+        }
+    );
+</script>
+
+</html>

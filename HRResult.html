@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/HRResult.css">
+    <title>人力资源管理评测</title>
+</head>
+
+<body>
+    <div class="headerH">
+        <div class="header headLogoBlue bgWhite">
+            <div class=" w1200">
+                <div class="headLogo">
+                    <label>
+                        <img src="./images/logo_blue.png" /> 诊断云
+                    </label>
+                </div>
+                <div class="headNav">
+                    <ul>
+                        <li>
+                            <a href="./index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="./knowmore.html">了解诊断</a>
+                        </li>
+                        <li>
+                            <a href="./modallib.html">诊断模型库</a>
+                        </li>
+                        <li class="navOn">
+                            <a href="./list.html">诊断服务</a>
+                        </li>
+                        <li>
+                            <a href="./map.html">诊断服务地图</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">关于我们</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="headUser yesSessionid showBox">
+                    <div class="headUser_name">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <span></span>
+                    </div>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="headUser hide noSessionid">
+                    <a href="./login.html" class="alogin">登录</a>
+                </div>
+                <div class="signOut">
+                    <i class="fa fa-caret-up" aria-hidden="true"></i>
+                    <ul>
+                        <li>
+                            <a href="./mine.html">我的诊断</a>
+                        </li>
+                        <li>
+                            <a id="comment">我要点评</a>
+                        </li>
+                        <li>
+                            <a id="feedback">意见反馈</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" id="outLogin">退出</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    <main class="content ">
+        <p>人力资源管理评测</p>
+        <h3>人力资源管理评测报告</h3>
+
+        <!--基本信息-->
+        <div class="basicInfo">
+            <div>
+                <p>
+                    <span>评测单位:</span>
+                    <span id="companyName">头领科技（昆山）有限公司</span>
+                </p>
+                <p>
+                    <span>评测人:</span>
+                    <span id="evaluatingPeople">张三</span>
+                </p>
+
+            </div>
+            <div>
+                <p>
+                    <span>评测日期:</span>
+                    <span id="evaluatingTime">2018-07-10</span>
+                </p>
+                <p>
+                    <span>评测人岗位:</span>
+                    <span id="evaluatingJob">技术专员</span>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <span>评测类型:</span>
+                    <span id="evaluatingType">企业评测</span>
+                </p>
+                <p>
+                    <span>&#x3000;</span>
+                    <span> </span>
+                </p>
+            </div>
+        </div>
+
+        <!--评测结果-->
+        <h4>评测结果</h4>
+        <div class="consequence">
+            <!--左侧-->
+            <div class="disk">
+                <!--圆盘-->
+                <div class="disk_one">
+                    <div class="disk_one_before"></div>
+                    <div class="disk_two">
+                        <div class="disk_three" id="disk_three">
+                            <p id="total_points">58</p>
+                            <p id="evaluatingLever">评级：3级</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--评级-->
+                <div class="grade_five">
+                    <span></span>
+                    <span>5级</span>
+                    <span>91&lt;X≤100</span>
+                </div>
+                <div class="grade_four">
+                    <span></span>
+                    <span>4级</span>
+                    <span>71&lt;X≤90</span>
+                </div>
+                <div class="grade_three">
+                    <span></span>
+                    <span>3级</span>
+                    <span>51&lt;X≤70</span>
+                </div>
+                <div class="grade_two">
+                    <span></span>
+                    <span>2级</span>
+                    <span>31&lt;X≤50</span>
+                </div>
+                <div class="grade_one">
+                    <span></span>
+                    <span>1级</span>
+                    <span>20≤X≤30</span>
+                </div>
+            </div>
+
+            <!--右侧-->
+            <div>
+                <p>现状:</p>
+                <div id="current_situation"></div>
+                <p>建议:</p>
+                <div id="suggest"></div>
+            </div>
+        </div>
+
+        <!--模块评测分布-->
+        <h4>模块评测分布</h4>
+        <div class="distribution" id="distribution"> </div>
+
+        <!--模块评测详情-->
+        <!--style="width: 100px;"-->
+        <h4>模块评测详情</h4>
+        <div class="particulars">
+            <table class="table table-bordered" style="table-layout: fixed;">
+                <tr style="text-align: center;font-weight: bold;">
+                    <td style="width: 100px;background-color: #eef1fc">序号</td>
+                    <td style="width: 275px;">模块组件</td>
+                    <td style="width: 165px;">当前阶段</td>
+                    <td style="width: 165px;">目标阶段</td>
+                    <td style="width: 500px;height: 35px; overflow: hidden;text-overflow: ellipsis;">评测说明</td>
+                </tr>
+                <tbody id="particulars_tbody"></tbody>
+            </table>
+        </div>
+
+        <!--综合说明-->
+        <h4>综合说明</h4>
+        <div class="comprehensive" id="comprehensive"></div>
+
+    </main>
+
+    <div class="footer_white">
+        <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+        <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+    </div>
+
+
+</body>
+<script src="./lib/jquery.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src='./lib/echarts.js'></script>
+<script src="./js/config.js"></script>
+<script src="./js/HRResult.js"></script>
+
+</html>

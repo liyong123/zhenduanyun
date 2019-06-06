@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/information.css">
+    <title>完善信息</title>
+
+</head>
+
+<body>
+    <div class="bgBlue">
+        <div class="headerH">
+            <div class="header bgBlue">
+                <div class="w1200 headLogoWhite">
+                    <div class="headLogo">
+                        <label>
+                            <img src="./images/logo_white.png" /> 诊断云
+                        </label>
+                        <span>信息完善</span>
+                    </div>
+                    <div class="headNav">
+                        <ul>
+                            <li class="navOn">
+                                <a href="./index.html">首页</a>
+                            </li>
+                            <li>
+                                <a href="./knowmore.html">了解诊断</a>
+                            </li>
+                            <li>
+                                <a href="./modallib.html">诊断模型库</a>
+                            </li>
+                            <li>
+                                <a href="./list.html">诊断服务</a>
+                            </li>
+                            <li>
+                                <a href="./map.html">诊断服务地图</a>
+                            </li>
+                            <li>
+                                <a href="./about.html">关于我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="headUser yesSessionid showBox">
+                        <div class="headUser_name">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            <span></span>
+                        </div>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="headUser hide noSessionid">
+                        <a href="./login.html" class="alogin">登录</a>
+                    </div>
+                    <div class="signOut">
+                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                        <ul>
+                            <li>
+                                <a href="./mine.html">我的诊断</a>
+                            </li>
+                            <li>
+                                <a id="comment">我要点评</a>
+                            </li>
+                            <li>
+                                <a id="feedback">意见反馈</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" id="outLogin">退出</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <div class="content information">
+            <div class="center">
+                <div class="txtBig">企业信息完善</div>
+                <form class="">
+                    <div class="form-group">
+                        <label class="control-label">企业名称：</label>
+                        <div class="infoInp">
+                            <input type="text" name="name" class="form-control" placeholder="请输入企业名称">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">所属行业：</label>
+                        <div class="infoInp w50">
+                            <select class="form-control selectFhangye">
+                                <option value="-1">请选择</option>
+                            </select>
+                            <select class="form-control selectZhangye">
+                                <option value="-1">请选择</option>
+                            </select>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">从业人数：</label>
+                        <div class="infoInp">
+                            <select class="form-control selectNo">
+                                <option value="-1">请选择</option>
+                                <option value="0">20人以下</option>
+                                <option value="1">20-300人</option>
+                                <option value="2">300-1000人以下</option>
+                                <option value="3">1000以上</option>
+                            </select>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">营业收入：</label>
+                        <div class="infoInp">
+                            <select class="form-control selectPrice">
+                                <option value="-1">请选择</option>
+                                <option value="0">300万以下</option>
+                                <option value="1">300万-2000万元</option>
+                                <option value="2">2000万-4亿元</option>
+                                <option value="3">4亿元以上</option>
+                            </select>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">营业年限：</label>
+                        <div class="infoInp">
+                            <select class="form-control selectYear">
+                                <option value="-1">请选择</option>
+                                <option value="0">1年以下</option>
+                                <option value="1">1-5年</option>
+                                <option value="2">5-10年</option>
+                                <option value="3">10年以上</option>
+                            </select>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">企业总资产：</label>
+                        <div class="infoInp">
+                            <select class="form-control selectZprice">
+                                <option value="-1">请选择</option>
+                                <option value="0">1000万元以下</option>
+                                <option value="1">1000万-1亿元</option>
+                                <option value="1">1亿-10亿元</option>
+                                <option value="2">10亿-100亿元</option>
+                                <option value="3">100亿元以上</option>
+                            </select>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">地区：</label>
+                        <div class="infoInp w30" data-toggle="distpicker" id="distpicker">
+                            <select class="form-control selectProvince" data-province="---- 选择省 ----"></select>
+                            <select class="form-control selectCity" data-city="---- 选择市 ----"></select>
+                            <select class="form-control selectDistrict" data-district="---- 选择区 ----"></select>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <p class="text-danger tip" style="width: 80%;margin-left: 20%;"></p>
+                    <a href="javascript:void(0);" class="btn infoSubmit">提 交</a>
+                </form>
+            </div>
+
+        </div>
+    </div>
+   <div class="footer">
+        <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+        <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+    </div>
+</body>
+<script src="./lib/jquery.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./js/city/distpicker.data.js"></script>
+<script src="./js/city/distpicker.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/information.js"></script>
+<script>
+    if (sessionid == null) {
+        location.href = "./index.html";
+    }
+</script>
+
+</html>

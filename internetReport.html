@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工业互联网成熟度评测</title>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/internetResult.css">
+</head>
+
+<body>
+    <div class="headerH">
+        <div class="header headLogoBlue bgWhite">
+            <div class=" w1200">
+                <div class="headLogo">
+                    <label>
+                        <img src="./images/logo_blue.png" /> 诊断云
+                    </label>
+                </div>
+                <div class="headNav">
+                    <ul>
+                        <li>
+                            <a href="./index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="./knowmore.html">了解诊断</a>
+                        </li>
+                        <li>
+                            <a href="./modallib.html">诊断模型库</a>
+                        </li>
+                        <li class="navOn">
+                            <a href="./list.html">诊断服务</a>
+                        </li>
+                        <li>
+                            <a href="./map.html">诊断服务地图</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">关于我们</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="headUser yesSessionid showBox">
+                    <div class="headUser_name">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <span></span>
+                    </div>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="headUser hide noSessionid">
+                    <a href="./login.html" class="alogin">登录</a>
+                </div>
+                <div class="signOut">
+                    <i class="fa fa-caret-up" aria-hidden="true"></i>
+                    <ul>
+                        <li>
+                            <a href="./mine.html">我的诊断</a>
+                        </li>
+                        <li>
+                            <a id="comment">我要点评</a>
+                        </li>
+                        <li>
+                            <a id="feedback">意见反馈</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" id="outLogin">退出</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="buildModelCon">
+
+        <main>
+
+            <div class="content">
+                <!--<p class="title_one">工业互联网成熟度评测><span>评测结果</span> <span>离散型/<span>单项评测</span></span>
+            </p>-->
+                <p class="title_one">
+                    工业互联网成熟度评测><span>评测结果</span>
+                    <span class="topic_classify" id="topic_classify"> <span>离散型</span>/<span>单项评测</span></span>
+                </p>
+                 <button id="renderPdf" data-name="智能制造能力成熟度整体测评报告">导出诊断报告</button>
+                <!--<button id="renderPdf" data-name="AII－工业互联网成熟度模型">导出诊断报告</button>-->
+                <div class="result" id="qyjxpjzdContent">
+                    <!--上一步-->
+                    <!--<div class="pre_topic"><i><</i></div>-->
+
+                    <!--内容-->
+                    <div class="result_content">
+                        <!--标题-->
+                        <h3 class="result_title">工业互联网成熟度评测报告</h3>
+                        <!--基本信息-->
+                        <div class="basicInfo">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p><span class="lable">评测单位：</span><span id="company_name">头领科技</span></p>
+                                    <p><span class="lable">评测人：</span><span id="evaluating_people">张三</span></p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><span class="lable">评测日期：</span><span id="evaluating_date">2018-05-16</span></p>
+                                    <p><span class="lable">评测人岗位：</span><span id="evaluating_position">技术专员</span></p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><span class="lable">评测类型：</span><span id="evaluating_type">专家评测</span></p>
+                                    <p><span class="lable"></span><span></span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--各单项能力评分-->
+                        <div class="ability_evaluating">
+
+                            <!--综合能力-->
+                            <div class="subentry" id="comprehensive_abilities">
+                                <!--单项标题-->
+                                <div>
+                                    <span class="subentry_title">综合能力</span>
+                                    <span id="demotion">降级</span>
+                                </div>
+                                <!--左侧-->
+                                <div class="disk">
+                                    <!--圆盘-->
+                                    <div class="disk_one">
+                                        <div class="disk_one_before"></div>
+                                        <div class="disk_two">
+                                            <div class="disk_three">
+                                                <p>76</p>
+                                                <p>评级：4级</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--评级-->
+                                    <div class="grade_five">
+                                        <span></span>
+                                        <span>5级</span>
+                                        <span>80&lt;X≤100</span>
+                                    </div>
+                                    <div class="grade_four">
+                                        <span></span>
+                                        <span>4级</span>
+                                        <span>60&lt;X≤80</span>
+                                    </div>
+                                    <div class="grade_three">
+                                        <span></span>
+                                        <span>3级</span>
+                                        <span>40&lt;X≤60</span>
+                                    </div>
+                                    <div class="grade_two">
+                                        <span></span>
+                                        <span>2级</span>
+                                        <span>20&lt;X≤40</span>
+                                    </div>
+                                    <div class="grade_one">
+                                        <span></span>
+                                        <span>1级</span>
+                                        <span>0≤X≤20</span>
+                                    </div>
+
+                                </div>
+
+                                <!--右侧-->
+                                <div class="evaluate">
+                                    <p class="textarea_p">等级描述:</p>
+                                    <div class="description"></div>
+                                    <br>
+                                    <p class="textarea_p">评价说明:</p>
+                                    <div class="explain"></div>
+                                </div>
+
+                            </div>
+
+                            <!--互联互通-->
+                            <div class="subentry" id="connectivity">
+                                <!--单项标题-->
+                                <div>
+                                    <span class="subentry_title">互联互通</span>
+                                    <span class="subentry_weight">(权重:0.35)</span>
+                                </div>
+                                <!--左侧-->
+                                <div class="disk">
+                                    <!--圆盘-->
+                                    <div class="disk_one">
+                                        <div class="disk_one_before"></div>
+                                        <div class="disk_two">
+                                            <div class="disk_three">
+                                                <p>76</p>
+                                                <p>评级：4级</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--评级-->
+                                    <div class="grade_five">
+                                        <span></span>
+                                        <span>5级</span>
+                                        <span>80&lt;X≤100</span>
+                                    </div>
+                                    <div class="grade_four  ">
+                                        <span></span>
+                                        <span>4级</span>
+                                        <span>60&lt;X≤80</span>
+                                    </div>
+                                    <div class="grade_three">
+                                        <span></span>
+                                        <span>3级</span>
+                                        <span>40&lt;X≤60</span>
+                                    </div>
+                                    <div class="grade_two">
+                                        <span></span>
+                                        <span>2级</span>
+                                        <span>20&lt;X≤40</span>
+                                    </div>
+                                    <div class="grade_one">
+                                        <span></span>
+                                        <span>1级</span>
+                                        <span>0≤X≤20</span>
+                                    </div>
+
+                                </div>
+
+                                <!--右侧-->
+                                <div class="evaluate">
+                                    <p class="textarea_p">等级描述:</p>
+                                    <div class="description"></div>
+                                    <br>
+                                    <p class="textarea_p">评价说明:</p>
+                                    <div class="explain"></div>
+                                </div>
+
+                            </div>
+
+                            <!--综合集成-->
+                            <div class="subentry" id="meta_synthesis">
+                                <!--单项标题-->
+                                <div>
+                                    <span class="subentry_title">综合集成</span>
+                                    <span class="subentry_weight">(权重:0.35)</span>
+                                </div>
+                                <!--左侧-->
+                                <div class="disk">
+                                    <!--圆盘-->
+                                    <div class="disk_one">
+                                        <div class="disk_one_before"></div>
+                                        <div class="disk_two">
+                                            <div class="disk_three">
+                                                <p>76</p>
+                                                <p>评级：4级</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--评级-->
+                                    <div class="grade_five">
+                                        <span></span>
+                                        <span>5级</span>
+                                        <span>80&lt;X≤100</span>
+                                    </div>
+                                    <div class="grade_four  ">
+                                        <span></span>
+                                        <span>4级</span>
+                                        <span>60&lt;X≤80</span>
+                                    </div>
+                                    <div class="grade_three">
+                                        <span></span>
+                                        <span>3级</span>
+                                        <span>40&lt;X≤60</span>
+                                    </div>
+                                    <div class="grade_two">
+                                        <span></span>
+                                        <span>2级</span>
+                                        <span>20&lt;X≤40</span>
+                                    </div>
+                                    <div class="grade_one">
+                                        <span></span>
+                                        <span>1级</span>
+                                        <span>0≤X≤20</span>
+                                    </div>
+
+                                </div>
+
+                                <!--右侧-->
+                                <div class="evaluate">
+                                    <p class="textarea_p">等级描述:</p>
+                                    <div class="description"></div>
+                                    <br>
+                                    <p class="textarea_p">评价说明:</p>
+                                    <div class="explain"></div>
+                                </div>
+
+                            </div>
+
+                            <!--数据分析利用-->
+                            <div class="subentry" id="data_analysis">
+                                <!--单项标题-->
+                                <div>
+                                    <span class="subentry_title"> 数据分析利用</span>
+                                    <span class="subentry_weight">(权重:0.35)</span>
+                                </div>
+                                <!--左侧-->
+                                <div class="disk">
+                                    <!--圆盘-->
+                                    <div class="disk_one">
+                                        <div class="disk_one_before"></div>
+                                        <div class="disk_two">
+                                            <div class="disk_three">
+                                                <p>76</p>
+                                                <p>评级：4级</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--评级-->
+                                    <div class="grade_five">
+                                        <span></span>
+                                        <span>5级</span>
+                                        <span>80&lt;X≤100</span>
+                                    </div>
+                                    <div class="grade_four  ">
+                                        <span></span>
+                                        <span>4级</span>
+                                        <span>60&lt;X≤80</span>
+                                    </div>
+                                    <div class="grade_three">
+                                        <span></span>
+                                        <span>3级</span>
+                                        <span>40&lt;X≤60</span>
+                                    </div>
+                                    <div class="grade_two">
+                                        <span></span>
+                                        <span>2级</span>
+                                        <span>20&lt;X≤40</span>
+                                    </div>
+                                    <div class="grade_one">
+                                        <span></span>
+                                        <span>1级</span>
+                                        <span>0≤X≤20</span>
+                                    </div>
+
+                                </div>
+
+                                <!--右侧-->
+                                <div class="evaluate">
+                                    <p class="textarea_p">等级描述:</p>
+                                    <div class="description"></div>
+                                    <br>
+                                    <p class="textarea_p">评价说明:</p>
+                                    <div class="explain"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--二级指标  折线图-->
+                        <div class="line_chart">
+                            <!--二级指标-->
+                            <div class="subentry_title">二级指标</div>
+
+                            <!--折线图-->
+                            <div class="line_chart_img" id="line_chart"></div>
+
+                            <div class="evaluate_line" id="evaluate_line">
+                                <p class="textarea_p">评价说明:</p>
+                                <div class="explain"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer_white">
+                <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+                <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+            </div>
+        </main>
+    </div>
+
+</body>
+<script src="./lib/jquery.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src='./lib/echarts.js'></script>
+<script src="./js/config.js"></script>
+<script src="./js/internetResult.js"></script>
+
+<!--<script type="text/javascript" src="./js/htmlToPdf/bluebird.js"></script>-->
+<script type="text/javascript" src="./js/htmlToPdf/canvg2.js"></script>
+<script type="text/javascript" src="./js/htmlToPdf/html2canvas.js"></script>
+<script type="text/javascript" src="./js/htmlToPdf/jsPdf.debug.js"></script>
+<!--<script type="text/javascript" src="./js/htmlToPdf/getcanvaspixelcolor.js"></script>-->
+<script type="text/javascript" src="./js/htmlToPdf/main.js"></script>
+
+</html>

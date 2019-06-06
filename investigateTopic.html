@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>企业智能制造调研问卷分析</title>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/investigateTopic.css">
+</head>
+
+<body>
+
+    <div class="headerH">
+        <div class="header headLogoBlue bgWhite">
+            <div class="w1200 headLogoWhite">
+                <div class="headLogo">
+                    <label>
+                            <img src="./images/logo_white.png" /> 诊断云
+                        </label>
+                </div>
+                <div class="headNav">
+                    <ul>
+                        <li>
+                            <a href="./index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="./knowmore.html">了解诊断</a>
+                        </li>
+                        <li>
+                            <a href="./modallib.html">诊断模型库</a>
+                        </li>
+                        <li class="navOn">
+                            <a href="./list.html">诊断服务</a>
+                        </li>
+                        <li>
+                            <a href="./map.html">诊断服务地图</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">关于我们</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="headUser yesSessionid showBox">
+                    <div class="headUser_name">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <span></span>
+                    </div>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="headUser hide noSessionid">
+                    <a href="./login.html" class="alogin">登录</a>
+                </div>
+                <div class="signOut">
+                    <i class="fa fa-caret-up" aria-hidden="true"></i>
+                    <ul>
+                        <li>
+                            <a href="./mine.html">我的诊断</a>
+                        </li>
+                        <li>
+                            <a id="comment">我要点评</a>
+                        </li>
+                        <li>
+                            <a id="feedback">意见反馈</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" id="outLogin">退出</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <p class="page_title"><span>企业调研问卷分析</span><span id="questionName">企业基础信息调查问卷(1/3)</span></p>
+        <div class="content_detail">
+            <div class="pre_page" id="pre_page"><span><</span></div>
+            <!--<span style="display: inline-block;background-color: #333333;width: 10px;height: 10px;border-radius: 50%;"></span>-->
+
+            <!--题目列表-->
+            <div id="topics"></div>
+
+            <!--题目序号-->
+            <div class="box" id="box" ></div>
+        </div>
+    </main>
+
+    <!--是否放弃本次评测-->
+    <div class="modal fade" id="pre_question_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal_header">
+                    <h4 class="modal-title modal_title" id="myModalLabel"><img src="./img/reminder_03.png" alt="" class="icon_img">提示</h4>
+                </div>
+                <div class="modal-body  modal_body">
+                    <p id="hints" class="modal_hints">是否放弃本次评测？</p>
+                    <button id="pre_cancel" class="pre_cancel" data-dismiss="modal">是</button>
+                    <button id="pre_continue" class="pre_continue" data-dismiss="modal">否</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<textarea name="analysis_description" id="analysis_description"  maxlength="1000" placeholder="请输入您的文字"></textarea>-->
+
+    <div class="footer_white">
+        <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+        <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+    </div>
+
+</body>
+<script src="./lib/jquery.min.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./js/bootstrap-datetimepicker.min.js"></script>
+<script src="./js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="./lib/echarts.js"></script>
+<script src="./lib/slidingPaging/pace.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/investigateTopic.js"></script>
+<script>
+    // <div class="topic">
+    //             <h3>1.企业行业分布情况</h3>
+    //             <div class="legend">
+    //                 <span class="length_active">饼图</span>
+    //                 <span>折线图</span>
+    //                 <span>柱状图</span>
+    //             </div>
+    //             <div class="bar_type">
+    //                 <span> <span class="radios"><i class="radios_active"></i></span>占比</span>
+    //                 <span><span class="radios"></span>累积百分比</span>
+    //             </div>
+    //             <div class="chart" id="pie_chart"></div>
+    //             <!--<div class="chart" id="bar_pile_chart"></div>-->
+    //             <!--<div class="chart" id="bar_chart"></div>
+    //             <div class="chart" id="line_chart"></div>-->
+
+    //             <!--分析描述-->
+    //             <p class="analysis_description_title">分析描述</p>
+    //             <div class="analysis_description">
+    //                 <textarea name="analysis_description" id="analysis_description" placeholder="请输入您的文字"></textarea>
+    //                 <span class="analysis_description_number"><strong>1</strong>/1000</span>
+    //             </div>
+    //         </div>
+</script>
+
+</html>

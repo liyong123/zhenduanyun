@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./lib/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="./lib/animate.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/buildModel.css">
+    <title>企业绩效评价诊断</title>
+</head>
+
+<body>
+    <div class="bgWhite">
+        <div class="headerH">
+            <div class="header bgWhite headLogoBlue">
+                <div class="w1200 headLogoWhite">
+                    <div class="headLogo">
+                        <label>
+                        <img src="./images/logo_white.png"/> 诊断云
+                    </label>
+                    </div>
+                    <div class="headNav">
+                        <ul>
+                            <li>
+                                <a href="./index.html">首页</a>
+                            </li>
+                            <li>
+                                <a href="./knowmore.html">了解诊断</a>
+                            </li>
+                            <li>
+                                <a href="./modallib.html">诊断模型库</a>
+                            </li>
+                            <li class="navOn">
+                                <a href="./list.html">诊断服务</a>
+                            </li>
+                            <li>
+                                <a href="./map.html">诊断服务地图</a>
+                            </li>
+                            <li>
+                                <a href="./about.html">关于我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="headUser yesSessionid hide showBox">
+                        <div class="headUser_name">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            <span></span>
+                        </div>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="headUser noSessionid">
+                        <a href="./login.html" class="alogin">登录</a>
+                        <a href="./register.html" class="aregister">免费注册</a>
+                    </div>
+                    <div class="signOut">
+                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                        <ul>
+                            <li>
+                                <a href="./mine.html">我的诊断</a>
+                            </li>
+                            <li>
+                                <a id="comment">我要点评</a>
+                            </li>
+                            <li>
+                                <a id="feedback">意见反馈</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" id="outLogin">退出</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content w1200 buildModel">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="./list.html">诊断服务</a>
+                </li>
+                <li class="active">企业绩效评价诊断</li>
+            </ol>
+            <div class="buildModelNav">
+                <div class="bMNav bMNavOne">
+                    <div class="bMNavCen">
+                        <div class="bM_NavIcon bM_NavIconOn"></div>
+                        <div class="bM_NavTxt">企业绩效模型构建</div>
+                    </div>
+                    <div class="bMNavLine bMNavLineOne"></div>
+                </div>
+                <div class="bMNav bMNavTwo">
+                    <div class="bMNavCen">
+                        <div class="bM_NavIcon"></div>
+                        <div class="bM_NavTxt">行业对标</div>
+                    </div>
+                    <div class="bMNavLine bMNavLineTwo"></div>
+                </div>
+                <div class="bMNav bMNavThree">
+                    <div class="bMNavCen">
+                        <div class="bM_NavIcon"></div>
+                        <div class="bM_NavTxt">评价结论</div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="buildModelCon">
+                <div class="bMConTitle">企业绩效模型构建</div>
+                <!--<div class="bMConSelect">-->
+                <!--<span class="bMC_SName">数据年份选择：</span>-->
+                <!--<div class="bMC_Sselect">-->
+                <!--&lt;!&ndash; <select class="form-control">-->
+                <!--<option>请选择</option>-->
+                <!--</select> &ndash;&gt;-->
+                <!--<input type="text" class="form-control form_datetime" id="time" value="" placeholder="请选择年份">-->
+                <!--<span class="text-danger timeTip hide">（请选择建模数据年份）</span>-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="bMConCenter">
+                    <div class="bMC_SName">数据建模： <span class="text-danger dataTip hide">（至少填写一项建模数据）</span></div>
+                    <div class="bMConCircularBig">
+                        <div class="bMConCircular">
+                            <div class="bMConCir bMConCir_a" onclick="showMode(1)">
+                                <div class="bMConCir_txt">
+                                    <b>1</b>
+                                    <div>
+                                        盈利能力状况模型
+                                        <br/>
+                                        <span>Profitability model</span>
+                                    </div>
+                                </div>
+                                <div class="bMConCir_img"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="bMConCir bMConCir_b" onclick="showMode(2)">
+                                <div class="bMConCir_img"></div>
+                                <div class="bMConCir_txt">
+                                    <b>2</b>
+                                    <div>
+                                        资产质量状况模型
+                                        <br/>
+                                        <span>Asset quality model</span>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="bMConCir bMConCir_c" onclick="showMode(3)">
+                                <div class="bMConCir_img"></div>
+                                <div class="bMConCir_txt">
+                                    <b>3</b>
+                                    <div>
+                                        债务风险状况模型
+                                        <br/>
+                                        <span>Debt risk model</span>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="bMConCir bMConCir_d" onclick="showMode(4)">
+                                <div class="bMConCir_txt">
+                                    <b>4</b>
+                                    <div>
+                                        经营增长状况模型
+                                        <br/>
+                                        <span>Business growth model</span>
+                                    </div>
+                                </div>
+                                <div class="bMConCir_img"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="bMConCir bMConCir_e" onclick="showMode(5)">
+                                <div class="bMConCir_txt">
+                                    <b>5</b>
+                                    <div>
+                                        补充资料
+                                        <br/>
+                                        <span>Supplementary information</span>
+                                    </div>
+                                </div>
+                                <div class="bMConCir_img"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <a href="javascript:void(0);" class="bMConCirBtn"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 盈利能力状况 model -->
+        <div class="modal fade" id="aModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">
+                            <i class="modelTitleIcon"></i>盈利能力状况</h4>
+                    </div>
+                    <div class="modal-body modal1">
+                        <!-- <div class="modelTip">净资产收益率 = 税后利润/净资产</div> -->
+                    </div>
+                    <p class="text-success successModel"></p>
+                    <!--<div class="modal-footer">-->
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
+                    <!--<button type="button" class="btn btn-primary submitProfit">保存</button>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <!-- 盈利能力状况 model end-->
+        <!-- 资产质量状况 model -->
+        <div class="modal fade" id="bModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">
+                            <i class="modelTitleIcon"></i>资产质量状况</h4>
+                    </div>
+                    <div class="modal-body modal2">
+                        <!--<div class="modelTip">净资产收益率 = 税后利润/净资产</div>-->
+                    </div>
+                    <p class="text-success successModel"></p>
+                    <!--<div class="modal-footer">-->
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
+                    <!--<button type="button" class="btn btn-primary submitProfit">保存</button>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <!-- 资产质量状况 model end-->
+        <!-- 债务风险状况 model -->
+        <div class="modal fade" id="cModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">
+                            <i class="modelTitleIcon"></i>债务风险状况</h4>
+                    </div>
+                    <div class="modal-body modal3">
+                        <!--<div class="modelTip">净资产收益率 = 税后利润/净资产</div>-->
+                    </div>
+                    <p class="text-success successModel"></p>
+                    <!--<div class="modal-footer">-->
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
+                    <!--<button type="button" class="btn btn-primary submitProfit">保存</button>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <!-- 债务风险状况 model end-->
+        <!-- 经营增长状况 model -->
+        <div class="modal fade" id="dModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">
+                            <i class="modelTitleIcon"></i>经营增长状况</h4>
+                    </div>
+                    <div class="modal-body modal4">
+                        <!--<div class="modelTip">净资产收益率 = 税后利润/净资产</div>-->
+                    </div>
+                    <p class="text-success successModel"></p>
+                    <!--<div class="modal-footer">-->
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
+                    <!--<button type="button" class="btn btn-primary submitProfit">保存</button>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <!-- 经营增长状况 model end-->
+        <!-- 补充资料 model -->
+        <div class="modal fade" id="eModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">
+                            <i class="modelTitleIcon"></i>补充资料</h4>
+                    </div>
+                    <div class="modal-body modal5">
+                        <!--<div class="modelTip">净资产收益率 = 税后利润/净资产</div>-->
+                    </div>
+                    <p class="text-success successModel"></p>
+                    <!--<div class="modal-footer">-->
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>-->
+                    <!--<button type="button" class="btn btn-primary submitProfit">保存</button>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <!-- 补充资料 model end-->
+        <div class="modal fade" id="tipModal">
+            <div class="modal-dialog" style="width: 450px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">
+                            <i class="modelTitleIcon"></i>提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div>至少填写一项建模数据！</div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:void(0);" class="btn btn-default" data-dismiss="modal">取消</a>
+                        <a href="./CoPerformance_filldata.html" class="btn btn-primary submitProfit">去填写</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_white">
+        <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+        <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+    </div>
+</body>
+<script src="./lib/jquery.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./lib/bootstrap-datetimepicker.min.js"></script>
+<script src="./lib/wow.min2.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/buildModel.js"></script>
+
+</html>

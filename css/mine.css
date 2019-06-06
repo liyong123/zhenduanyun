@@ -1,0 +1,445 @@
+body {
+	width: 100%;
+	height: 100%;
+	/*background-color: #f3f2f2;*/
+}
+
+main {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 5%;
+}
+
+main>.main_left {
+	display: inline-block;
+	position: absolute;
+	width: 20%;
+	height: 73vh;
+	background-color: #FFFFFF;
+	overflow: auto;
+	border: 2px solid #f3f3f3;
+}
+
+.main_left h3 {
+	color: #919399;
+	font-size: 20px;
+	width: 100%;
+	background-color: #EFF2FE;
+	line-height: 60px;
+	margin-top: 0px;
+	padding-left: 20px;
+}
+
+.main_left p {
+	line-height: 40px;
+	padding-left: 20px;
+	width: 100%;
+	cursor: pointer;
+}
+
+.main_left .fa {
+	color: #919399;
+	line-height: 40px;
+	margin-right: 10px;
+}
+
+.main_left .fa-chevron-right,
+.main_left .fa-chevron-down {
+	float: right;
+}
+
+.modal_name {
+	padding-left: 35px;
+	/*display: none;*/
+}
+
+.modalNameActive {
+	background-color: #39bef1;
+	color: #ffffff;
+}
+
+main>.main_right {
+	display: inline-block;
+	width: 75%;
+	margin-left: 22%;
+	background-color: #FFFFFF;
+	min-height: 73vh;
+	/*overflow: auto;*/
+	border: 2px solid #f3f3f3;
+}
+
+
+/*-----------------------------------------我的诊断列表---------------------------------*/
+
+.table_title {
+	width: 100%;
+	background-color: #EFF2FE;
+	line-height: 60px;
+	padding-left: 5%;
+	padding-right: 10%;
+	height: 60px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.main_right .glyphicon,
+.main_right .fa {
+	color: #5f83f1;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+
+/*-------------------------------------------------------整体测评------------------------------------*/
+
+.relativelyResult>h3 {
+	display: none;
+}
+
+.relativelyResult>h3 {
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+h3>span {
+	display: inline-block;
+	padding-bottom: 10px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.appraisalActive {
+	border-bottom: 5px solid #5f83f1;
+}
+
+.entiretyAppraisal {
+	display: none;
+	margin-top: 10px;
+}
+
+.ent_score {
+	display: inline-block;
+	width: 80px;
+	height: 60px;
+	margin-left: 20px;
+	text-align: center;
+}
+
+.ent_score>i {
+	float: right;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: red;
+	line-height: 20px;
+}
+
+.ent_score>.fa {
+	color: white;
+	margin-right: -9px;
+}
+
+.ent_score>strong {
+	font-size: 35px;
+	color: #f0c871;
+}
+
+.ent_score>span {
+	display: inline-block;
+	width: 100%;
+	font-size: 18px;
+	color: #ffffff;
+	background-color: #5f83f1;
+}
+
+.ent_detail {
+	display: inline-block;
+	width: calc(100% - 120px);
+	padding: 0px 10px 0px 10px;
+	color: #666666;
+}
+
+.histogram_radar {
+	margin-top: 25px;
+	padding: 0 10px 0 10px;
+}
+
+.histogramAll {
+	display: inline-block;
+	width: 72%;
+	height: 240px;
+	border: 1px solid #e5e5e5;
+}
+
+.histogram {
+	width: 100%;
+	height: 210px;
+}
+
+.histogramLabel {
+	float: right;
+	/*display: inline-block;*/
+	font-size: 12px;
+	margin-right: 10px;
+}
+
+.histogramLabel span {
+	margin-left: 5px;
+}
+
+.histogramLabel i {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-right: 8px;
+	border-radius: 3px;
+}
+
+.histogramLabel>span:nth-of-type(1)>i {
+	background-color: #f0c870;
+}
+
+.histogramLabel>span:nth-of-type(2)>i {
+	background-color: #ac9efc;
+}
+
+.radarMap {
+	margin-top: 10px;
+	padding: 0 10px 0 10px;
+}
+
+.radarAll {
+	display: inline-block;
+	width: 24%;
+	height: 240px;
+	border: 1px solid #e5e5e5;
+}
+
+.histogramAll>p,
+.radarAll>p {
+	width: 100%;
+	height: 30px;
+	padding-top: 10px;
+}
+
+.radarAll>p>span {
+	display: inline-block;
+	line-height: 25px;
+	text-align: center;
+}
+
+.histogramAll>p>span:nth-of-type(1),
+.radarAll>p>span:nth-of-type(1) {
+	float: left;
+	margin-left: 10px;
+	padding-left: 8px;
+	border-left: 5px solid #bfcdf9;
+}
+
+.radarAll>p>span:nth-of-type(2) {
+	float: right;
+	width: 80px;
+	color: #ffffff;
+	font-size: 14px;
+	border-radius: 12.5px 0px 0px 12.5px;
+}
+
+.standard {
+	background-color: #67d781;
+}
+
+.UNstandard {
+	background-color: #e57c53;
+}
+
+.radar {
+	width: 100%;
+	height: 210px;
+}
+
+
+/*---------------------------------------------------------分项测评 --------------------------*/
+
+.subentryAppraisal {
+	display: none;
+	width: 100%;
+}
+
+.subentry {
+	width: 100%;
+	height: 120px;
+	margin-bottom: 30px;
+}
+
+.subentry>div {
+	margin: 0 auto;
+	display: inline-block;
+	width: 18%;
+	margin-left: 1.3%;
+	border: 1px solid #dfdfdf;
+}
+
+.subentry h4 {
+	margin: 0px;
+	width: 100%;
+	background-color: #f7f9fe;
+	line-height: 35px;
+	font-size: 14px;
+}
+
+.subentry h4>span {
+	margin-left: 10px;
+	padding-left: 10px;
+	border-left: 5px solid #bac9f9;
+}
+
+.subentry img {
+	width: 40%;
+	margin: 5%;
+}
+
+.sub_detail {
+	float: right;
+	width: 40%;
+	margin: 5%;
+}
+
+.sub_detail>span {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.sub_detail>span:nth-of-type(1) {
+	font-size: 32px;
+	font-weight: bold;
+	line-height: 40px;
+}
+
+.sub_detail>span:nth-of-type(2) {
+	font-size: 16px;
+	color: #b3b3b3;
+}
+
+.sub_histogram {
+	width: 96%;
+	margin: 0 auto;
+	border: 1px solid #dfdfdf;
+	padding-top: 20px;
+}
+
+.sub_histogram>p {
+	line-height: 30px;
+	padding-left: 20px;
+}
+
+.sub_histogram>p>span:nth-of-type(1) {
+	border-left: 5px solid #bfcdf9;
+	padding-left: 10px;
+	font-size: 16px;
+}
+
+.histogramSub {
+	width: 100%;
+	height: 390px;
+}
+
+
+/*暂无数据*/
+
+.UNdata {
+	display: none;
+	width: 100%;
+	line-height: 50px;
+	text-align: center;
+	color: gray;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.search,
+.neuter,
+.trash,
+.neuters {
+	width: 20px;
+	height: 20px;
+	margin: 3px;
+	cursor: pointer;
+}
+
+.search>img,
+.neuter>img,
+.trash>img,
+.neuters>img {
+	width: 20px;
+	height: 20px;
+}
+
+
+/*************************************企业综合诊断报告**********************************/
+
+.synthesizeCon {
+	display: none;
+	/*visibility: hidden;*/
+}
+
+.synthesizeTitle {
+	width: 100%;
+	color: #333333;
+	text-align: center;
+}
+
+.downloadSSYN {
+	display: inline-block;
+	width: 100px;
+	line-height: 30px;
+	float: right;
+	background-color: #39bef1;
+	color: #ffffff;
+	border-radius: 5px;
+	text-align: center;
+	margin-right: 30px;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.downloadSSYN:hover {
+	color: #ffffff;
+}
+
+#synthesizeText {
+	width: 50vw;
+	margin: auto;
+	margin-top: 70px;
+}
+
+#exports {
+	margin-bottom: 20px;
+}
+
+#pdfCon {
+	height: 56vh;
+	border: 1px solid #999999;
+}
+
+#exports:hover {
+	color: #ffffff;
+}
+
+#exports:target {
+	color: #ffffff;
+}
+
+
+/*/************************21维度制造****************************/
+
+.show_astrict {
+	/*width: 100px;*/
+	/*white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;*/
+}

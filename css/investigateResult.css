@@ -1,0 +1,124 @@
+body{
+    background-image: url('../images/white-bg.jpeg');
+    background-size: 100% auto;
+}
+
+.content {
+    margin: 0 auto;
+    width: 1200px;
+    min-height: 100vh;
+    padding-top: 10px;
+    color: #333333;
+    padding-bottom: 50px;
+    background-color: #ffffff;
+}
+
+.page_title {
+    width: 1200px;
+    line-height: 80px;
+    border-bottom: 10px solid #5f83f1;
+    margin: 0 auto;
+}
+
+.result_content {
+    width: 880px;
+    margin: 0 auto;
+}
+
+h3 {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    line-height: 90px;
+    font-size: 26px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.pre_page {
+    float: left;
+    margin: 45px 25px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid #5f83f1;
+    color: #5f83f1;
+    text-align: center;
+    line-height: 52px;
+    font-size: 25px;
+}
+
+.pre_page>span {
+    display: inline-block;
+    transform: scale(1, 2);
+}
+
+.basic_result {
+    line-height: 50px;
+    margin-top: 15px;
+    margin-bottom: 55px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.basic_result>p {
+    display: inline-block;
+    width: 280px;
+}
+
+.basic_result>p:nth-child(2),
+.basic_result>p:nth-child(3) {
+    text-align: right;
+}
+
+.basic_result>p>span:nth-child(1) {
+    color: #252527;
+}
+
+.basic_result>p>span:nth-child(2) {
+    color: #8c8c8d;
+}
+
+.summarize{
+    color: #999999;
+    margin-bottom: 70px;
+}
+
+.subtitle {
+    width: 100%;
+     text-align: left;
+    line-height: 70px;
+    font-size: 24px;
+    position: relative;
+    border-bottom: 0;
+    margin-bottom: 20px;
+}
+
+.subtitle:after{
+    content:'';
+    display: inline-block;
+    width: 60px;
+    height: 10px;
+    background-color: #bcb6e9;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+
+.summarize>div{
+    text-indent: 30px;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+.topic_description{
+    width: 100%;
+}
+
+.chart {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    height: 390px;
+    border: 1px solid #dcdfe6;
+}

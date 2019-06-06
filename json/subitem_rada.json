@@ -1,0 +1,358 @@
+[
+  {
+    "areaScore": [
+      {
+        "name": "离散-制造维度-服务-客户服务",
+        "text": [
+          {
+            "level": "501",
+            "score": 1
+          },
+          {
+            "level": "502",
+            "score": 0
+          },
+          {
+            "level": "503",
+            "score": 0
+          },
+          {
+            "level": "504",
+            "score": 0
+          },
+          {
+            "level": "505",
+            "score": 0
+          }
+        ]
+      },
+      {
+        "name": "离散-制造维度-服务-产品服务",
+        "text": [
+          {
+            "level": "501",
+            "score": 1
+          },
+          {
+            "level": "502",
+            "score": 0
+          },
+          {
+            "level": "503",
+            "score": 0
+          },
+          {
+            "level": "504",
+            "score": 0
+          },
+          {
+            "level": "505",
+            "score": 0
+          }
+        ]
+      },
+      {
+        "name": "离散-制造维度-设计-产品设计",
+        "text": [
+          {
+            "level": "501",
+            "score": 0.25
+          },
+          {
+            "level": "502",
+            "score": 0
+          },
+          {
+            "level": "503",
+            "score": 0
+          },
+          {
+            "level": "504",
+            "score": 0
+          },
+          {
+            "level": "505",
+            "score": 0
+          }
+        ]
+      },
+      {
+        "name": "离散-智能维度-资源要素-战略和组织",
+        "text": [
+          {
+            "level": "501",
+            "score": 1
+          },
+          {
+            "level": "502",
+            "score": 0
+          },
+          {
+            "level": "503",
+            "score": 0
+          },
+          {
+            "level": "504",
+            "score": 0
+          },
+          {
+            "level": "505",
+            "score": 0
+          }
+        ]
+      },
+      {
+        "name": "离散-制造维度-设计-工艺设计",
+        "text": [
+          {
+            "level": "501",
+            "score": 0.5
+          },
+          {
+            "level": "502",
+            "score": 0
+          },
+          {
+            "level": "503",
+            "score": 0
+          },
+          {
+            "level": "504",
+            "score": 0
+          },
+          {
+            "level": "505",
+            "score": 0
+          }
+        ]
+      },
+      {
+        "name": "离散-智能维度-资源要素-雇员",
+        "text": [
+          {
+            "level": "501",
+            "score": 1
+          },
+          {
+            "level": "502",
+            "score": 0
+          },
+          {
+            "level": "503",
+            "score": 0
+          },
+          {
+            "level": "504",
+            "score": 0
+          },
+          {
+            "level": "505",
+            "score": 0
+          }
+        ]
+      },
+      {
+        "name": "离散-制造维度-生产-采购",
+        "text": [
+          {
+            "level": "501",
+            "score": 0.5
+          },
+          {
+            "level": "502",
+            "score": 0
+          },
+          {
+            "level": "503",
+            "score": 0
+          },
+          {
+            "level": "504",
+            "score": 0
+          },
+          {
+            "level": "505",
+            "score": 0
+          }
+        ]
+      },
+      {
+        "name": "离散-智能维度-资源要素-设备",
+        "text": [
+          {
+            "level": "501",
+            "score": 1
+          },
+          {
+            "level": "502",
+            "score": 0
+          },
+          {
+            "level": "503",
+            "score": 0
+          },
+          {
+            "level": "504",
+            "score": 0
+          },
+          {
+            "level": "505",
+            "score": 0
+          }
+        ]
+      },
+      {
+        "name": "离散-制造维度-生产-计划与调度",
+        "text": [
+          {
+            "level": "501",
+            "score": 0
+          },
+          {
+            "level": "502",
+            "score": 0
+          },
+          {
+            "level": "503",
+            "score": 0
+          },
+          {
+            "level": "504",
+            "score": 0
+          },
+          {
+            "level": "505",
+            "score": 0
+          }
+        ]
+      },
+      {
+        "name": "离散-制造维度-生产-生产作业",
+        "text": [
+          {
+            "level": "501",
+            "score": 0
+          },
+          {
+            "level": "502",
+            "score": 0
+          },
+          {
+            "level": "503",
+            "score": 0
+          },
+          {
+            "level": "504",
+            "score": 0
+          },
+          {
+            "level": "505",
+            "score": 0
+          }
+        ]
+      },
+      {
+        "name": "离散-制造维度-生产-质量控制",
+        "text": [
+          {
+            "level": "501",
+            "score": 0
+          },
+          {
+            "level": "502",
+            "score": 0
+          },
+          {
+            "level": "503",
+            "score": 0
+          },
+          {
+            "level": "504",
+            "score": 0
+          },
+          {
+            "level": "505",
+            "score": 0
+          }
+        ]
+      },
+      {
+        "name": "离散-制造维度-生产-仓储与配送",
+        "text": [
+          {
+            "level": "501",
+            "score": 0
+          },
+          {
+            "level": "502",
+            "score": 0
+          },
+          {
+            "level": "503",
+            "score": 0
+          },
+          {
+            "level": "504",
+            "score": 0
+          },
+          {
+            "level": "505",
+            "score": 0
+          }
+        ]
+      },
+      {
+        "name": "离散-制造维度-物流-物流管理",
+        "text": [
+          {
+            "level": "501",
+            "score": 0.8
+          },
+          {
+            "level": "502",
+            "score": 0
+          },
+          {
+            "level": "503",
+            "score": 0
+          },
+          {
+            "level": "504",
+            "score": 0
+          },
+          {
+            "level": "505",
+            "score": 0
+          }
+        ]
+      },
+      {
+        "name": "离散-制造维度-销售-销售管理",
+        "text": [
+          {
+            "level": "501",
+            "score": 0.8
+          },
+          {
+            "level": "502",
+            "score": 0
+          },
+          {
+            "level": "503",
+            "score": 0
+          },
+          {
+            "level": "504",
+            "score": 0
+          },
+          {
+            "level": "505",
+            "score": 0
+          }
+        ]
+      }
+    ],
+    "msg": "success",
+    "status": "1"
+  }
+]

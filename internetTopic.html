@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工业互联网成熟度评测</title>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/internetTopic.css">
+</head>
+
+<body>
+    <div class="headerH">
+        <div class="header headLogoBlue bgWhite">
+            <div class=" w1200">
+                <div class="headLogo">
+                    <label>
+                        <img src="./images/logo_blue.png" /> 诊断云
+                    </label>
+                </div>
+                <div class="headNav">
+                    <ul>
+                        <li>
+                            <a href="./index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="./knowmore.html">了解诊断</a>
+                        </li>
+                        <li>
+                            <a href="./modallib.html">诊断评测库</a>
+                        </li>
+                        <li class="navOn">
+                            <a href="./list.html">诊断服务</a>
+                        </li>
+                        <li>
+                            <a href="./map.html">诊断服务地图</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">关于我们</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="headUser yesSessionid showBox">
+                    <div class="headUser_name">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <span></span>
+                    </div>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="headUser hide noSessionid">
+                    <a href="./login.html" class="alogin">登录</a>
+                </div>
+                <div class="signOut">
+                    <i class="fa fa-caret-up" aria-hidden="true"></i>
+                    <ul>
+                        <li>
+                            <a href="./mine.html">我的诊断</a>
+                        </li>
+                        <li>
+                            <a id="comment">我要点评</a>
+                        </li>
+                        <li>
+                            <a id="feedback">意见反馈</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" id="outLogin">退出</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="content">
+            <p class="topic_type">
+                工业互联网成熟度评测><span id="element">互联互通</span>><span id="capacity">智能设备联网</span>
+                <span class="topic_classify" id="topic_classify"> <span>离散型</span>/<span>单项评测</span></span>
+            </p>
+            <!--题目框-->
+            <div class="topics">
+                <!--进度条-->
+                <div class="progress_bar">
+                    <div id="progress_bar"></div>
+                </div>
+
+                <!--上一步-->
+                <div class="pre_topic" id="pre_topic"><i><</i></div>
+
+                <!--题目序号-->
+                <div class="topic_number" id="topic_number">
+                    <span>1</span>/<span>27</span>
+                </div>
+
+                <!--题目信息-->
+                <div id="topic_infos">
+                    <!--<div class="topic_info">-->
+                    <!--题目-->
+                    <!--<p class="topic_title">1、所有工业机器人设备中，与生产控制系统或者制造执行系统直接连接的数量占比？所有工业机器人设备中，与生产控制系统或者制造执行系统直接连接的数量占比？</p>-->
+                    <!--选项-->
+                    <!--<div class="topic_option">
+                            <div class="">
+                                <span class="radio_option"><i class=""></i></span>
+                                <p>能够基于上述诊断结果提供远程参数配置、远程维修操作等服务</p>
+                            </div>
+                            <div>
+                                <span class="radio_option"><i class=""></i></span>
+                                <p>能够基于上述诊断结果提供远程参数配置、远程维修操作等服务</p>
+                            </div>
+                            <div>
+                                <span class="radio_option"><i class=""></i></span>
+                                <p>能够基于上述诊断结果提供远程参数配置、远程维修操作等服务</p>
+                            </div>
+                            <div class="option_active">
+                                <span class="radio_option"><i class="radio_active"></i></span>
+                                <p>能够基于上述诊断结果提供远程参数配置、远程维修操作等服务能够基于上述诊断结果提供远程参数配置、远程维修操作等服务能够基于上述诊断结果提供远程参数配置、远程维修操作等服务</p>
+                            </div>
+                            <div>
+                                <span class="radio_option"><i class=""></i></span>
+                                <p>能够基于上述诊断结果提供远程参数配置、远程维修操作等服务能够基于上述诊断结果提供远程参数配置、远程维修操作等服务</p>
+                            </div>-->
+
+                    <!--</div>-->
+                    <!--</div>-->
+                </div>
+
+
+                <!--下一题-->
+                <p class="hint" id="hint"></p>
+                <div class="next_topic" id="next_topic">下一题</div>
+
+            </div>
+            <div class="footer_white">
+                <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+                <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!--是否放弃本次评测-->
+    <div class="modal fade" id="pre_question_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal_header">
+                    <h4 class="modal-title modal_title" id="myModalLabel"><img src="./img/reminder_03.png" alt="" class="icon_img">提示</h4>
+                </div>
+                <div class="modal-body  modal_body">
+                    <p id="hints" class="modal_hints">是否放弃本次评测？</p>
+                    <button id="pre_cancel" class="pre_cancel" data-dismiss="modal">是</button>
+                    <button id="pre_continue" class="pre_continue" data-dismiss="modal">否</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./lib/jquery.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./js/bootstrap-datetimepicker.min.js"></script>
+<script src="./js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/internetTopic.js"></script>
+
+</html>

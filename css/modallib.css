@@ -1,0 +1,95 @@
+.mod_content{
+    width : 1203px;
+    height : 560px ;
+    margin: 100px auto;
+    font-size : 0px;
+}
+
+.mod_content .mod_panel{
+    float : left;
+    height : 560px;
+    width : 380px;
+    font-size : 14px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #ffffff;
+    position:relative;
+}
+
+.mod_content .mod_panel.expand{
+    height:661px;
+}
+
+.mod_content .mod_panel:not(:last-child){
+    margin-right: 31px;
+}
+
+.mod_content .mod_panel .mod_title{
+    height : 180px;
+    line-height : 180px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 36px;
+    position : relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.mod_content .mod_panel .mod_title img{
+    margin-top : 30px;
+}
+
+.mod_title.first{
+    background:linear-gradient(#ffb360 ,#ff8b88);
+}
+.mod_title.second{
+    background:linear-gradient(#fc78b9 ,#f89398);
+}
+.mod_title.last{
+    background:linear-gradient(#66caff ,#6693ff);
+}
+
+.mod_content .mod_panel .mod_title .mod_desc{
+    font-size : 24px;
+    line-height : 24px;
+    position : absolute;
+    bottom : 15px;
+    width : 100%;
+    text-align:center
+}
+
+.mod_icon{
+    width : 120px;
+    height : 111px;
+    text-align: center;
+    line-height: 150px;
+    position :relative;
+    float :left;
+    cursor: pointer;
+}
+
+.mod_icon .mod_icon_desc{
+    position: absolute;
+    width: 100%;
+    bottom : 6px;
+    font-size: 14px;
+    line-height :14px;
+    white-space: nowrap;
+    color : #000000;
+}
+
+.mod_icon_container{
+    padding : 8px 10px 0 10px;
+    position: relative;
+}
+
+.mod_icon_container:after{
+    clear:both;
+}
+
+.mod_arrow{
+    position: absolute;
+    height : 20px;
+    width: 100%;
+    text-align: center;
+    bottom : 10px;
+}

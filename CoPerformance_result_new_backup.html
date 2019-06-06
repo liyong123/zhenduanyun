@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./lib/animate.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/buildModel.css">
+    <link rel="stylesheet" href="./css/result_new_backup.css">
+    <title>企业绩效评价诊断</title>
+
+</head>
+
+<body>
+
+    <div class="bgWhite">
+        <div class="headerH">
+            <div class="header headLogoBlue bgWhite">
+                <div class="w1200 headLogoWhite">
+                    <div class="headLogo">
+                        <label>
+                        <img src="./images/logo_white.png"/> 诊断云
+                    </label>
+                    </div>
+                    <div class="headNav">
+                        <ul>
+                            <li>
+                                <a href="./index.html">首页</a>
+                            </li>
+                            <li>
+                                <a href="./knowmore.html">了解诊断</a>
+                            </li>
+                            <li>
+                                <a href="./modallib.html">诊断模型库</a>
+                            </li>
+                            <li class="navOn">
+                                <a href="./list.html">诊断服务</a>
+                            </li>
+                            <li>
+                                <a href="./map.html">诊断服务地图</a>
+                            </li>
+                            <li>
+                                <a href="./about.html">关于我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="headUser yesSessionid hide showBox">
+                        <div class="headUser_name">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            <span></span>
+                        </div>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="headUser noSessionid">
+                        <a href="./login.html" class="alogin">登录</a>
+                        <a href="./register.html" class="aregister">免费注册</a>
+                    </div>
+                    <div class="signOut">
+                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                        <ul>
+                            <li>
+                                <a href="./mine.html">我的诊断</a>
+                            </li>
+                            <li>
+                                <a id="comment">我要点评</a>
+                            </li>
+                            <li>
+                                <a id="feedback">意见反馈</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" id="outLogin">退出</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content w1200 buildModel">
+            <button id="renderPdf" data-name="企业绩效评价报告">导出诊断报告</button>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="./list.html">诊断服务</a>
+                </li>
+                <li class="active">企业绩效评价诊断</li>
+            </ol>
+            <div class="buildModelNav">
+                <div class="bMNav bMNavOne">
+                    <a href="./CoPerformance_buildModel.html" class="bMNavCen">
+                        <div class="bM_NavIcon bM_NavIconOn"></div>
+                        <div class="bM_NavTxt">企业绩效模型构建</div>
+                    </a>
+                    <div class="bMNavLine bMNavLineOne bMNavLineOn"></div>
+                </div>
+                <div class="bMNav bMNavTwo">
+                    <a href="./CoPerformance_industryBid.html" class="bMNavCen">
+                        <div class="bM_NavIcon bM_NavIconOn"></div>
+                        <div class="bM_NavTxt">行业对标</div>
+                    </a>
+                    <div class="bMNavLine bMNavLineTwo bMNavLineOn"></div>
+                </div>
+                <div class="bMNav bMNavThree">
+                    <a href="./CoPerformance_result_new_backup.html" class="bMNavCen">
+                        <div class="bM_NavIcon bM_NavIconOn"></div>
+                        <div class="bM_NavTxt">评价结论</div>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="buildModelCon">
+                <div class="bMConTitle">评价结论</div>
+                <div id="qyjxpjzdContent" class="clearfix">
+                    <h3 class="resultConH3">企业绩效评价报告</h3>
+                    <div class="resultCenter">
+                        <div class="resultCenTitle">
+                            <div class="rC_subtitle">基本信息</div>
+                            <div class="rC_subtitlea">Essential information</div>
+                        </div>
+                        <div class="resultCenCon">
+                            <div class="companyInfo">
+                                公司名称：
+                                <span class="companyName"></span>
+                            </div>
+                            <div class="companyInfo">
+                                企业规模：
+                                <span class="companyStandard"></span>
+                            </div>
+                            <div class="companyInfo">
+                                数据年份：
+                                <span class="dataYear"></span>
+                            </div>
+                            <div class="companyInfo">
+                                所属行业：
+                                <span class="fromIndustry"></span>
+                            </div>
+                            <div class="companyInfo">
+                                诊断日期：
+                                <span class="evalDate"></span>
+                            </div>
+                            <div class="companyInfo">
+                                对标年份：
+                                <span class="compareYear"></span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="resultCenter">
+                        <div class="resultCenTitle">
+                            <div class="rC_subtitle">对标信息</div>
+                            <div class="rC_subtitlea">Benchmarking information</div>
+                        </div>
+                        <div class="resultCenCon">
+                            <div class="companyInfo">
+                                对标行业：
+                                <span class="benchmarkCom"></span>
+                            </div>
+                            <div class="companyInfo">
+                                对标规模：
+                                <span class="BenchmarkArea"></span>
+                            </div>
+                            <div class="companyInfo">
+                                数据来源：
+                                <span class="BenchmarkMsg"></span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="resultCenter">
+                        <div class="resultCenTitle">
+                            <div class="rC_subtitle">评价概述</div>
+                            <div class="rC_subtitlea">An overview of evaluation</div>
+                        </div>
+                        <div class="resultCenCon">
+                            <div class="companyScore">
+                                <div class="comScoreTitle">企业绩效评价得分</div>
+                                <div class="comScoreProGray">
+                                    <div class="comScoreProBlue">
+                                        <div class="comState">
+                                            <big></big>
+                                            <small></small>
+                                        </div>
+                                        <div class="comScore"></div>
+                                    </div>
+                                    <div class="comMaxScore">140</div>
+                                </div>
+                                <div class="comScoreTip">
+                                    <div class="color71">各指标在标准所处区间对应分的总和</div>
+                                    <div class="color3a">
+                                        <span>优秀：117-140</span>
+                                        <span>良好：97-117</span>
+                                        <span>平均：69-97</span>
+                                        <br/>
+                                        <span>较低：56-69</span>
+                                        <span>较差：0-56</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="companyChart">
+                                <div class="comChartTitle">参评企业等级分布</div>
+                                <div class="comChart" id="comChart"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="resultCenter industryDetail">
+                        <div class="resultCenTitle">
+                            <div class="rC_subtitle">行业对标明细</div>
+                            <div class="rC_subtitlea">Industry benchmarking</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+        <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+    </div>
+</body>
+<script src="./lib/jquery.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./lib/echarts.js"></script>
+<script src="./lib/wow.min2.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/lineChart.js"></script>
+<script src="./js/result_new_backup.js"></script>
+
+<script type="text/javascript" src="./js/htmlToPdf/bluebird.js"></script>
+<script type="text/javascript" src="./js/htmlToPdf/canvg2.js"></script>
+<script type="text/javascript" src="./js/htmlToPdf/html2canvas.js"></script>
+<script type="text/javascript" src="./js/htmlToPdf/jsPdf.debug.js"></script>
+<script type="text/javascript" src="./js/htmlToPdf/main.js"></script>
+
+<script type="text/javascript">
+</script>
+
+</html>

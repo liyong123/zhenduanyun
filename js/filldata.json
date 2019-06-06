@@ -1,0 +1,342 @@
+[
+  {
+    "importList": [
+      {
+        "data": "其他",
+        "id": "38",
+        "inputValue": "",
+        "name": "本年科技支出合计",
+        "no": "H1",
+        "unit": "元"
+      },
+      {
+        "data": "其他",
+        "id": "39",
+        "inputValue": "",
+        "name": "年末不良资产总额",
+        "no": "H2",
+        "unit": "元"
+      },
+      {
+        "data": "其他",
+        "id": "40",
+        "inputValue": "",
+        "name": "资本成本（机会成本）",
+        "no": "H3",
+        "unit": "元"
+      },
+      {
+        "data": "其他",
+        "id": "41",
+        "inputValue": "",
+        "name": "或有负债余额",
+        "no": "H4",
+        "unit": "元"
+      }
+    ],
+    "lossList": [
+      {
+        "data": "损益表",
+        "id": "25",
+        "inputValue": "",
+        "name": "营业收入年初数",
+        "no": "P11",
+        "unit": "元"
+      },
+      {
+        "data": "损益表",
+        "id": "26",
+        "inputValue": "",
+        "name": "营业收入年末数",
+        "no": "P05",
+        "unit": "元"
+      },
+      {
+        "data": "损益表",
+        "id": "27",
+        "inputValue": "",
+        "name": "营业成本",
+        "no": "P07",
+        "unit": "元"
+      },
+      {
+        "data": "损益表",
+        "id": "28",
+        "inputValue": "",
+        "name": "营业税金及附加",
+        "no": "P13",
+        "unit": "元"
+      },
+      {
+        "data": "损益表",
+        "id": "29",
+        "inputValue": "",
+        "name": "营业利润年初数",
+        "no": "P12",
+        "unit": "元"
+      },
+      {
+        "data": "损益表",
+        "id": "30",
+        "inputValue": "",
+        "name": "营业利润年末数",
+        "no": "P04",
+        "unit": "元"
+      },
+      {
+        "data": "损益表",
+        "id": "31",
+        "inputValue": "",
+        "name": "营业费用",
+        "no": "P08",
+        "unit": "元"
+      },
+      {
+        "data": "损益表",
+        "id": "32",
+        "inputValue": "",
+        "name": "管理费用",
+        "no": "P09",
+        "unit": "元"
+      },
+      {
+        "data": "损益表",
+        "id": "33",
+        "inputValue": "",
+        "name": "财务费用",
+        "no": "P10",
+        "unit": "元"
+      },
+      {
+        "data": "损益表",
+        "id": "34",
+        "inputValue": "",
+        "name": "营业外收入",
+        "no": "P06",
+        "unit": "元"
+      },
+      {
+        "data": "损益表",
+        "id": "35",
+        "inputValue": "",
+        "name": "利润总额",
+        "no": "P02",
+        "unit": "元"
+      },
+      {
+        "data": "损益表",
+        "id": "36",
+        "inputValue": "",
+        "name": "所得税",
+        "no": "P03",
+        "unit": "元"
+      },
+      {
+        "data": "损益表",
+        "id": "37",
+        "inputValue": "",
+        "name": "净利润",
+        "no": "P01",
+        "unit": "元"
+      }
+    ],
+    "moneyList": [
+      {
+        "data": "现金流量表",
+        "id": "22",
+        "inputValue": "",
+        "name": "折旧",
+        "no": "F01",
+        "unit": "元"
+      },
+      {
+        "data": "现金流量表",
+        "id": "23",
+        "inputValue": "",
+        "name": "经营现金净流量",
+        "no": "F03",
+        "unit": "元"
+      },
+      {
+        "data": "现金流量表",
+        "id": "24",
+        "inputValue": "",
+        "name": "无形资产摊销",
+        "no": "F02",
+        "unit": "元"
+      }
+    ],
+    "msg": "success",
+    "propertyList": [
+      {
+        "data": "资产负债表",
+        "id": "1",
+        "inputValue": "",
+        "name": "存货年初数",
+        "no": "C01",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "2",
+        "inputValue": "",
+        "name": "存货年末数",
+        "no": "C12",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "3",
+        "inputValue": "",
+        "name": "应收账款年初数",
+        "no": "C06",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "4",
+        "inputValue": "",
+        "name": "应收账款年末数",
+        "no": "C07",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "5",
+        "inputValue": "",
+        "name": "流动资产年初数",
+        "no": "C08",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "6",
+        "inputValue": "",
+        "name": "流动资产年末数",
+        "no": "C09",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "7",
+        "inputValue": "",
+        "name": "资产总额年初数",
+        "no": "C23",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "8",
+        "inputValue": "",
+        "name": "资产总额年末数",
+        "no": "C24",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "9",
+        "inputValue": "",
+        "name": "应付利息",
+        "no": "C14",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "10",
+        "inputValue": "",
+        "name": "短期借款",
+        "no": "C15",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "11",
+        "inputValue": "",
+        "name": "应付债券",
+        "no": "C18",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "12",
+        "inputValue": "",
+        "name": "长期借款",
+        "no": "C17",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "13",
+        "inputValue": "",
+        "name": "一年内到期非流动负债",
+        "no": "C16",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "14",
+        "inputValue": "",
+        "name": "流动负债年末数",
+        "no": "C13",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "15",
+        "inputValue": "",
+        "name": "实收资本年初数",
+        "no": "C02",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "16",
+        "inputValue": "",
+        "name": "实收资本年末数",
+        "no": "C04",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "17",
+        "inputValue": "",
+        "name": "资本公积年初数",
+        "no": "C03",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "18",
+        "inputValue": "",
+        "name": "资本公积年末数",
+        "no": "C05",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "19",
+        "inputValue": "",
+        "name": "所有者权益年初数",
+        "no": "C20",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "20",
+        "inputValue": "",
+        "name": "所有者权益年末数",
+        "no": "C21",
+        "unit": "元"
+      },
+      {
+        "data": "资产负债表",
+        "id": "21",
+        "inputValue": "",
+        "name": "负债总额年末数",
+        "no": "C10",
+        "unit": "元"
+      }
+    ],
+    "status": "1"
+  }
+]

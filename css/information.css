@@ -1,0 +1,82 @@
+.content {
+    position: relative;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.center {
+    width: 530px;
+    margin: 0 auto;
+    color: #fff;
+    position: absolute;
+    margin-top: -212px;
+    top: 45%;
+    margin-left: -265px;
+    left: 50%;
+}
+
+.txtBig {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.control-label {
+    width: 16%;
+    text-align: right;
+    font-weight: initial;
+    float: left;
+    margin-right: 4%;
+    display: inline-block;
+    line-height: 34px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.infoInp {
+    width: 80%;
+    float: left;
+}
+
+.infoInp .form-control {
+    width: 100%;
+}
+
+.w50 .form-control {
+    width: 49%;
+    float: left;
+}
+
+.w50 .form-control:last-child {
+    margin-left: 2%;
+}
+
+.w30 .form-control {
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+}
+
+.w30 .form-control:last-child {
+    width: 32%;
+    margin-right: 0;
+}
+
+.infoSubmit {
+    width: 80%;
+    margin-left: 20%;
+    margin-top: 15px;
+    border-radius: 25px;
+    background: #01aced;
+    font-size: 18px;
+    color: #fff;
+}
+
+.infoSubmit:hover{
+    color: #fff;
+}

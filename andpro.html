@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/andpro.css">
+    <title>分项测评</title>
+</head>
+
+<body>
+    <div class="headerH">
+        <div class="header headLogoBlue bgWhite">
+            <div class=" w1200">
+                <div class="headLogo">
+                    <label>
+                        <img src="./images/logo_blue.png" /> 诊断云
+                    </label>
+                </div>
+                <div class="headNav">
+                    <ul>
+                        <li>
+                            <a href="./index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="./knowmore.html">了解诊断</a>
+                        </li>
+                        <li>
+                            <a href="./modallib.html">诊断模型库</a>
+                        </li>
+                        <li class="navOn">
+                            <a href="./list.html">诊断服务</a>
+                        </li>
+                        <li>
+                            <a href="./map.html">诊断服务地图</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">关于我们</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="headUser yesSessionid showBox">
+                    <div class="headUser_name">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <span></span>
+                    </div>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="headUser hide noSessionid">
+                    <a href="./login.html" class="alogin">登录</a>
+                </div>
+                <div class="signOut">
+                    <i class="fa fa-caret-up" aria-hidden="true"></i>
+                    <ul>
+                        <li>
+                            <a href="./mine.html">我的诊断</a>
+                        </li>
+                        <li>
+                            <a id="comment">我要点评</a>
+                        </li>
+                        <li>
+                            <a id="feedback">意见反馈</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" id="outLogin">退出</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <p class="topicTitle ">
+            <span id="questName">问卷名称</span>&gt;
+            <span>分项</span>&gt;
+            <span id="pageName">设计&gt;产品设计</span>
+        </p>
+        <div class="schedule">
+            <div id="schs" style="width:10%"></div>
+        </div>
+        <div class="main">
+            <div class="pre_question" id="pre_question">
+                <div><i class="glyphicon glyphicon-menu-left"></i></div>
+            </div>
+            <p class="tyleDelect"></p>
+            <div class="question_number">
+                <span id="pressPage">1</span>/<span id="numberPage">5</span>
+            </div>
+            <hr>
+            <div id="topics">
+                <div class="topic" style="display: none;">
+                    <p>2级：具备符合国建很方便覅㛑行比胡会计的女卡覅和您好比uehiehbbvbn</p>
+                    <div class="choose">
+                        <span class="one">没有</span>
+                        <span class="two">一般</span>
+                        <span class="three">较好</span>
+                        <span class="four">非常好</span>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 100%;text-align: center;color: red;margin-top: 10px;" id="hintss">您尚未答完本页题目，请答完本页题目再进入下一页！</div>
+        </div>
+
+        <div class="next_question" id="next_question">
+            <div>NEXT</div>
+        </div>
+
+        <!--<div class="content">
+            <div class="center"></div>
+        </div>-->
+    </div>
+    <div class="footer_white">
+        <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+        <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+    </div>
+    <!-- Modal 上一题模态框-->
+    <div class="modal fade" id="pre_question_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #eff2fe;">
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                    <h4 class="modal-title" id="myModalLabel" style="background-color: #eff2fe;"><img src="./img/reminder_03.png" alt="" style="margin-right: 10px;">提示</h4>
+                </div>
+                <div class="modal-body" style="text-align: center;padding-bottom: 70px;">
+                    <p id="hint">是否放弃本次诊断？</p>
+                    <button id="pre_cancel" data-dismiss="modal">是</button>
+                    <button id="pre_continue" data-dismiss="modal">否</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib/jquery.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./js/config.js"></script>
+<!--<script src="./js/evaluating.js"></script>-->
+<script src="./js/andpro.js"></script>
+
+</html>

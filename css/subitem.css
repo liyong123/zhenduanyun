@@ -1,0 +1,289 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    margin: 0 auto;
+    width: 1200px;
+    height: 100%;
+}
+
+.abilityResult {
+    line-height: 60px;
+    font-size: 24px;
+}
+
+.abilityResult::after {
+    content: " ";
+    display: block;
+    width: 55px;
+    height: 10px;
+    background-color: #bcb6e9;
+}
+
+
+/*********************分项测评 企业详情  第一部分************************/
+
+.firstHeader {
+    padding-top: 45px;
+    border-bottom: 45px solid #f7f9fb;
+    padding-left: 10px;
+}
+
+.resultTitle {
+    padding-left: 10px;
+    line-height: 35px;
+    font-size: 15px;
+}
+
+.firstHeader>h1 {
+    width: 100%;
+    text-align: center;
+    line-height: 90px;
+    font-size: 30px;
+    border-bottom: 1px solid #d2d4dc;
+}
+
+.titleLeft {
+    display: inline-block;
+    width: 560px;
+    line-height: 30px;
+    color: #333333;
+    padding-top: 60px;
+    padding-bottom: 65px;
+}
+
+.basicInfo {
+    display: inline-block;
+    min-width: 260px;
+}
+
+.lableName {
+    display: inline-block;
+    color: #d0d0d0;
+    padding-right: 10px;
+}
+
+.subType {
+    margin: 10px;
+    color: #999999;
+}
+
+.subType>span {
+    display: inline-block;
+    width: 77px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #e1e3e8;
+    margin: 8px;
+}
+
+.subTypeSpan {
+    color: #6f8ff2;
+}
+
+.basicDetail {
+    float: right;
+    margin: 55px;
+}
+
+.basicDetail>p {
+    line-height: 30px;
+    padding: 10px;
+    width: 490px;
+}
+
+/****************************************分项测评 各分项测评结果  第二部分***********************/
+
+.ability_rank {
+    padding-top: 45px;
+    padding-bottom: 65px;
+    border-bottom: 45px solid #f7f9fb;
+    padding-left: 10px;
+}
+
+.abilityCutline {
+    float: right;
+    color: #333333;
+    margin: -15px 10px 0px 0px;
+}
+
+.abilityCutline>span {
+    display: inline-block;
+    margin-left: 10px;
+    width: 18px;
+    height: 12px;
+    font-size: 12px;
+    line-height: 12px;
+    border-radius: 3px;
+    margin-right: 3px;
+}
+
+.cutlineZero {
+    background-image: url('../img/wei_03.png')
+}
+
+.cutlineOne {
+    background-color: #829ced;
+}
+
+.cutlineTwo {
+    background-color: #74c2e1;
+}
+
+.cutlineThree {
+    background-color: #a4b1df;
+}
+
+.cutlineFour {
+    background-color: #aaa1ee;
+}
+
+.cutlineFive {
+    background-color: #d9c5ff;
+}
+
+.abilityedsrf {
+    margin-top: 20px;
+    width: 1200px;
+}
+
+.abilityedsrf>div{
+    margin-top: 10px;
+}
+
+.left {
+    display: inline-block;
+    width: 39%;
+}
+
+.left>div {
+    line-height: 25px;
+    width: 456px;
+}
+
+.message {
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 1px;
+}
+
+.mes_type {
+    color: #6f8ff2;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.right {
+    display: inline-block;
+    width: 60%;
+    margin-left: 10px;
+}
+
+.location {
+    /*margin-top: -60px;*/
+    color: red;
+    width: 65px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.right>div span {
+    display: inline-block;
+    height: 55px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.backgroundZero {
+    width: 65px;
+    background-image: url('../img/weiDaBiao_03.png')
+}
+
+.right>div span:nth-of-type(2) {
+    width: 120px;
+}
+
+.right>div span:nth-of-type(3) {
+    width: 120px;
+}
+
+.right>div span:nth-of-type(4) {
+    width: 120px;
+}
+
+.right>div span:nth-of-type(5) {
+    width: 120px;
+}
+
+.right>div span:nth-of-type(6) {
+    width: 120px;
+}
+
+
+/***********************************分项测评 测评企业单项能力等级详情  第三部分*************************/
+
+.industry {
+    padding-top: 45px;
+    padding-bottom: 65px;
+    padding-left: 10px;
+    border-bottom: 45px solid #f7f9fb;
+}
+
+.loc_title {
+    margin-top: 70px;
+    width: 1200px;
+}
+
+.loc_title>div {
+    display: inline-block;
+    margin: auto;
+    margin-top: 40px;
+    margin-right: 20px;
+    width: 370px;
+    height: 500px;
+    border: 1px solid #dddddd;
+    padding-top: 55px;
+}
+
+.radarImage {
+    width: 340px;
+    height: 320px;
+    margin: 0 auto;
+}
+
+
+/***********************************分项测评 测评企业单项能力等级分布  第四部分*************8*********/
+
+.abilityTitle {
+    height: 100px;
+}
+
+.rankedDistribution {
+    padding-top: 45px;
+    padding-bottom: 65px;
+    padding-left: 10px;
+}
+
+.rankedDistributionImg {
+    width: 1200px;
+}
+
+#rankedDistributionImg>div {
+    display: inline-block;
+    width: 520px;
+    height: 420px;
+    margin-top: 40px;
+    margin-right: 60px;
+    border: 1px solid #dddddd;
+}

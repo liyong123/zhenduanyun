@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <title>底部</title>
+
+</head>
+
+<body>
+    <div class="footer bgBlue">
+        <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+        <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+    </div>
+    <div id="honeyCombLink" onclick="backToHoneyComb()">
+        <img src="/images/honeycomb-logo.png" alt="">
+    </div>
+</body>
+<script>
+    function backToHoneyComb(){
+        var path = "http://www.icshoneycomb.com";
+        if(window.location.href.indexOf('localhost:8080')!=-1){
+            path = path.replace('www.icshoneycomb.com','localhost:3001');//调研宝
+        }
+        window.location.href=path;
+    }
+</script>
+
+
+</html>

@@ -1,0 +1,48 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#questionnaireList {
+    width: 100%;
+    padding: 100px 0 0 0;
+    text-align: center;
+}
+
+.typeDiao {
+    position: relative;
+    top: 10px;
+    width: 305px;
+    height: 530px;
+    margin: 0 30px;
+    line-height: 30px;
+    display: inline-block;
+    background-color: beige;
+}
+
+.typeDiao>img {
+    width: 305px;
+    height: 200px;
+}
+
+.typeDiao>h4{
+    font-size: 16px;
+    margin: 10px;
+}
+
+.typeDiao>p{
+    font-size: 12px;
+    margin: 20px  15px;
+    text-align: justify;
+}
+
+.typeDiaoText {
+    display: block;
+    width: 100px;
+    line-height: 30px;
+    border-radius: 15px;
+    background-color: #08a1db;
+    color: #ffffff;
+    margin: 0 auto;
+}

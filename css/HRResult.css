@@ -1,0 +1,298 @@
+body {
+    /*background-image: url('../images/white-bg.jpeg');
+    background-size: 100% auto;*/
+    color: #333333;
+    background-color: #ffffff;
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+    min-height: 90vh;
+    padding-bottom: 150px;
+}
+
+.content>p:nth-child(1) {
+    line-height: 30px;
+    margin-top: 40px;
+}
+
+.content>h3 {
+    width: 100%;
+    border-bottom: 1px solid #d2d4dc;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+/*******************************************************基本信息*****************************************/
+
+.basicInfo {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.basicInfo>div {
+    display: inline-block;
+    width: 395px;
+    margin: 0 auto;
+}
+
+.basicInfo p>span {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.basicInfo p>span:nth-child(1) {
+    width: 80px;
+    color: #d0d0d0;
+}
+
+.basicInfo p>span:nth-child(2) {
+    width: 300px;
+    color: #333333;
+}
+
+/****************************************************评测  子标题*****************************************/
+
+h4 {
+    line-height: 55px;
+    margin-top: 100px;
+}
+
+h4:after {
+    content: ' ';
+    height: 10px;
+    width: 60px;
+    background-color: #bcb6e9;
+    float: right;
+    margin-right: calc(100% - 60px);
+}
+
+/*******************************************************评测结果********************************************/
+
+.consequence {
+    width: 100%;
+    position: relative;
+}
+
+.consequence>div {
+    display: inline-block;
+    height: 330px;
+}
+
+.consequence>div:nth-child(1) {
+    width: 430px;
+    margin-left: 60px;
+}
+
+/*左侧圆盘*/
+
+.disk {
+    display: inline-block;
+    width: 370px;
+}
+
+.disk_one {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.disk_one_before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 98%;
+    height: 50%;
+    box-sizing: border-box;
+    top: 25%;
+    left: 44px;
+    border: 3px solid #babfdf;
+    border-top: transparent;
+    border-radius: 0 0 50% 50%/ 0 0 100% 100%;
+    z-index: 2;
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
+
+.disk_two {
+    width: 170px;
+    height: 170px;
+    background-color: #f2f3f9;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+.disk_three {
+    width: 130px;
+    height: 130px;
+    background-color: #babfdf;
+    border-radius: 50%;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 18px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.disk_three>p:nth-child(1) {
+    font-size: 40px;
+}
+
+.disk_three>p:nth-child(2) {
+    font-size: 16px;
+}
+
+.grade_five,
+.grade_four,
+.grade_three,
+.grade_two,
+.grade_one {
+    z-index: 5;
+}
+
+.grade_five {
+    color: #95aaef;
+    position: absolute;
+    left: 145px;
+    top: 60px;
+}
+
+.grade_four {
+    color: #74c2e1;
+    position: absolute;
+    left: 193px;
+    top: 110px;
+}
+
+.grade_three {
+    color: #99aeec;
+    position: absolute;
+    left: 205px;
+    top: 154px;
+}
+
+.grade_two {
+    color: #b0a8ef;
+    position: absolute;
+    left: 194px;
+    top: 207px;
+}
+
+.grade_one {
+    color: #bea5ee;
+    position: absolute;
+    left: 150px;
+    top: 254px;
+}
+
+.grade_five>span:nth-child(1),
+.grade_four>span:nth-child(1),
+.grade_three>span:nth-child(1),
+.grade_two>span:nth-child(1),
+.grade_one>span:nth-child(1) {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #babfdf;
+    border-radius: 50%;
+    margin-right: 30px;
+    background-color: #ffffff;
+    z-index: 5;
+}
+
+.grade_five>span:nth-child(2),
+.grade_four>span:nth-child(2),
+.grade_three>span:nth-child(2),
+.grade_two>span:nth-child(2),
+.grade_one>span:nth-child(2) {
+    display: inline-block;
+    margin-right: 15px;
+    color: #333333;
+}
+
+.grade_active>span:nth-child(1) {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #babfdf;
+    filter: glow(color=#babfdf, strength=5);
+}
+
+/*右侧说明*/
+
+.consequence>div:nth-child(2) {
+    width: 700px;
+    /*float: right;*/
+    margin-top: 30px;
+    padding-right: 15px;
+}
+
+.consequence>div:nth-child(2)>p {
+    line-height: 45px;
+}
+
+.consequence>div:nth-child(2)>div {
+    line-height: 25px;
+    text-indent: 28px;
+}
+
+/********************************************************************模块评测分布*******************************************/
+
+.distribution {
+    width: 100%;
+    height: 370px;
+    border: 1px solid #c3c7d0;
+    margin-top: 30px;
+}
+
+/********************************************************************模块评测详情*******************************************/
+
+.particulars {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.table-bordered>tr>td,
+.table-bordered>tr>th {
+    text-align: center;
+}
+
+#particulars_tbody {
+    text-align: center;
+    color: #afafaf;
+}
+
+#particulars_tbody tr>td:nth-child(1) {
+    background-color: #eef1fc;
+    color: #333333;
+}
+
+.title_noprea{
+    width: 500px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*********************************************************************综合评价**********************************************/
+
+.comprehensive {
+    margin-top: 35px;
+    line-height: 25px;
+    text-indent: 28px;
+}

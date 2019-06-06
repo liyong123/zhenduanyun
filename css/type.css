@@ -1,0 +1,194 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/bgn4@1x.jpeg');
+    background-size: 100% 100%;
+}
+
+.center {
+    position: absolute;
+    margin-top: -215px;
+    top: 40%;
+    margin-left: -600px;
+    left: 50%;
+    padding-top: 20px;
+}
+
+.typeCenter {
+    background: #fff;
+    padding: 30px 100px;
+}
+
+.typeName {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.typeCenterCon {
+    width: 1000px;
+    position: relative;
+}
+
+.typeCenterBottom {
+    width: 600px;
+    float: left;
+    padding: 0 20px;
+}
+
+.typeCenterTop {
+    width: 400px;
+    float: left;
+    padding: 0 20px;
+    border-right: 1px solid #cccccc;
+}
+
+.fontColor {
+    color: #999;
+    position: absolute;
+    bottom: 10px;
+    left: 420px;
+}
+
+.typeFxTip {
+    color: #666;
+    padding-bottom: 10px;
+}
+
+.typeCenterTop .typeCenterItem,
+.typeCenterTop .typeCenterItem dl,
+.typeCenterTop .typeWid {
+    width: 100%;
+}
+
+.typeCenterTop .typeCenterItem dl dt {
+    width: 160px;
+    height: 120px;
+    margin: 7px auto;
+}
+
+.typeCenterTop .typeCenterItem dl dd {
+    font-size: 20px;
+}
+
+.typeCenterItem {
+    width: 25%;
+    float: left;
+    cursor: pointer;
+}
+
+.typeCenterItem dl {
+    width: 120px;
+    background: #fff;
+    text-align: center;
+    color: #666;
+    padding: 15px 0;
+    border: 1px solid #eee;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+}
+
+.typeCenterItem dl dt {
+    width: 67px;
+    height: 59px;
+    margin: 7px auto;
+}
+
+.typeCenterItem dl .typeZheng {
+    background: url("../images/fx_zt.png") no-repeat;
+    background-size: auto 100%;
+}
+
+.typeCenterItem dl .typeXiao {
+    background: url("../img/fx_fx01.png") no-repeat;
+    background-size: auto 100%;
+}
+
+.typeCenterItem dl .typeChan {
+    background: url("../img/fx_fx03.png") no-repeat;
+    background-size: auto 100%;
+}
+
+.typeCenterItem dl .typeSheng {
+    background: url("../img/fx_fx02.png") no-repeat;
+    background-size: auto 100%;
+}
+
+.typeCenterItem dl .typeWu {
+    background: url("../img/fx_fx04.png") no-repeat;
+    background-size: auto 100%;
+}
+
+.typeCenterItem dl .typeFu {
+    background: url("../img/fx_fx05.png") no-repeat;
+    background-size: auto 100%;
+}
+
+.typeCenterItem dl dd {
+    margin-top: 15px;
+}
+
+.typeWid {
+    padding-top: 15px;
+    width: 120px;
+    text-align: center;
+}
+
+.typeCenterItem span {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #383838;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+}
+
+.typeOn::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #5f83f1;
+    border-radius: 50px;
+    left: 2px;
+    top: 2px;
+}
+
+.typePrev,
+.typeNext {
+    height: 116px;
+    width: 58px;
+    background: #bfcdf9;
+    position: absolute;
+    top: 50%;
+    margin-top: -58px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.typePrev i,
+.typeNext i {
+    display: inline-block;
+    width: 15px;
+    height: 28px;
+    margin: 44px 0;
+    background: url("../images/icon.png") no-repeat;
+}
+
+.typePrev {
+    border-radius: 0 50px 50px 0;
+    left: 0;
+}
+
+.typePrev i {
+    background-position: 0 0;
+}
+
+.typeNext {
+    right: 0;
+    border-radius: 50px 0 0 50px;
+}
+
+.typeNext i {
+    background-position: right bottom;
+}

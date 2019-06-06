@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>智能制造成熟度分项集成报告</title>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./lib/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/subitem.css">
+
+</head>
+
+<body style="background-color: #ffffff">
+    <div class="headerH">
+        <div class="header headLogoBlue bgWhite">
+            <div class=" w1200">
+                <div class="headLogo">
+                    <label>
+                        <img src="./images/logo_blue.png" /> 诊断云
+                    </label>
+                </div>
+                <div class="headNav">
+                    <ul>
+                        <li>
+                            <a href="./index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="./knowmore.html">了解诊断</a>
+                        </li>
+                        <li>
+                            <a href="./modallib.html">诊断模型库</a>
+                        </li>
+                        <li class="navOn">
+                            <a href="./list.html">诊断服务</a>
+                        </li>
+                        <li>
+                            <a href="./map.html">诊断服务地图</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">关于我们</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="headUser yesSessionid showBox">
+                    <div class="headUser_name">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <span>企业</span>
+                    </div>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="headUser hide noSessionid">
+                    <a href="./login.html" class="alogin">登录</a>
+                </div>
+                <div class="signOut">
+                    <i class="fa fa-caret-up" aria-hidden="true"></i>
+                    <ul>
+                        <li>
+                            <a href="./mine.html">我的诊断</a>
+                        </li>
+                        <li>
+                            <a id="comment">我要点评</a>
+                        </li>
+                        <li>
+                            <a id="feedback">意见反馈</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" id="outLogin">退出</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div style="position: relative;width:1200px;margin: 0 auto" class="clearfix content">
+        <p class="resultTitle" style="padding-top: 40px">能制造能力成熟度模型分项集成报告（<span id="headline"></span></p>
+        <button id="renderPdf" data-name="能制造能力成熟度模型分项集成报告">导出诊断报告</button>
+        <main class="content" id="qyjxpjzdContent" style="padding:0 10px">
+            <!--分项测评 企业详情  第一部分-->
+            <div class="firstHeader" style="padding-top: 0">
+                <h1>智能成熟度模型分项测评报告</h1>
+                <div>
+                    <div class="titleLeft">
+                        <div class="basicInfo"><span class="lableName">企业名称:</span><span id="name"></span></div>
+                        <div class="basicInfo"><span class="lableName">测评标准:</span><span>智能制造能力成熟度模型白皮书1.0版（中国电子技术标准化研究院（CESI））</span></div>
+                        <div class="basicInfo"><span class="lableName">测评时间:</span><span id="time"></span></div>
+                        <div class="basicInfo"><span class="lableName">企业类型:</span><span id="companyType"></span></div>
+                        <div class="basicInfo"><span class="lableName">测评类型:</span><span id="EvaluatinType"></span></div>
+                        <div class="subType" id="subType">
+                            <span>设计</span>
+                            <span>生产</span>
+                            <span>物流</span>
+                            <span>销售</span>
+                            <span>服务</span>
+                        </div>
+                    </div>
+
+                    <div class="basicDetail">
+                        <span class="lableName">测评概述:</span>
+                        <p>单项能力模型测评主要面向中小企业或只在制造的某些环节有智能化提升需求的企业，用于衡量企业在制造的某一关键业务环节的智能化能力侧重制造维的实施。模型中将每一制造环节的智能制造能力分为五级，数字越大能力等级越高。</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--分项测评 各分项测评结果  第二部分-->
+            <div class="ability_rank">
+                <div class="abilityTitle">
+                    <p class="abilityResult">各分项评测结果</p>
+                    <p class="abilityCutline">
+                        <span class="cutlineZero"></span>未达标
+                        <span class="cutlineFive"></span>已规划级
+                        <span class="cutlineFour"></span>规范级
+                        <span class="cutlineThree"></span>集成级
+                        <span class="cutlineTwo"></span>优化级
+                        <span class="cutlineOne"></span>引领级
+                    </p>
+                </div>
+                <!--=========================================================================-->
+                <div class="abilityedsrf" id="ability_rank">
+                    <!--<div class="left">
+                        <h4 class="mes_type">生产能力</h4>
+                        <p>该能力得分 <strong>0.56</strong>,级别：<span class="norm">未达标</span> </p>
+                        <div style="color : #7f7f7f">该类实现预测、预警、自适应，体现人工智能,可持续改进该类智能制造能力，并为其他类的能力水平提升提供帮助</div>
+                    </div>
+                    <div class="right">
+                        <div >
+                            <div class="location" style="width: 55px; margin-left: 0px;">
+                                <i class="glyphicon glyphicon-map-marker"></i>
+                            </div>
+                            <span class="backgroundZero"></span>
+                            <span style="background-color:#FFFFFF;"></span>
+                            <span style="background-color:#FBFBFB;"></span>
+                            <span style="background-color:#F7F7F7;"></span>
+                            <span style="background-color:#F4F4F4;"></span>
+                            <span style="background-color:#F1F1F1;"></span>
+                        </div>
+                    </div>-->
+                </div>
+                <!--==============================================================================-->
+            </div>
+
+            <!--分项测评 测评企业单项能力等级详情  第三部分-->
+            <div class="industry" style="margin-bottom: 30px;">
+                <div class="abilityTitle">
+                    <p class="abilityResult">测评企业单项能力等级详情</p>
+                </div>
+                <div class="loc_title" id="loctt" style="text-align:center">
+                </div>
+            </div>
+
+            <!--分项测评 测评企业单项能力等级分布  第四部分-->
+            <div class=" rankedDistribution">
+                <div class="abilityTitle">
+                    <p class="abilityResult">测评企业单项能力等级分布</p>
+                    <p class="abilityCutline">
+                        <span class="cutlineZero"></span>未达标
+                        <span class="cutlineFive"></span>已规划级
+                        <span class="cutlineFour"></span>规范级
+                        <span class="cutlineThree"></span>集成级
+                        <span class="cutlineTwo"></span>优化级
+                        <span class="cutlineOne"></span>引领级
+                    </p>
+                </div>
+                <div class="rankedDistributionImg" id="rankedDistributionImg">
+                    <!--<div>
+                      <h4>测评企业设计能力等级分布</h4>
+                      <div class="histogram"></div>
+                  </div>-->
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <div class="footer">
+        <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+        <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+    </div>
+</body>
+
+<script src="./lib/jquery.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./lib/echarts.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/subentryIntegration.js"></script>
+
+<script type="text/javascript" src="./js/htmlToPdf/bluebird.js"></script>
+<script type="text/javascript" src="./js/htmlToPdf/canvg2.js"></script>
+<script type="text/javascript" src="./js/htmlToPdf/html2canvas.js"></script>
+<script type="text/javascript" src="./js/htmlToPdf/jsPdf.debug.js"></script>
+<script type="text/javascript" src="./js/htmlToPdf/main.js"></script>
+
+<script type="text/javascript">
+</script>
+
+</html>

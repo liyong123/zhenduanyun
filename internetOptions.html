@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工业互联网成熟度评测</title>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="./css/cjAll.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/internetOptions.css">
+</head>
+
+<body>
+    <div class="headerH">
+        <div class="header headLogoBlue bgWhite">
+            <div class=" w1200">
+                <div class="headLogo">
+                    <label>
+                        <img src="./images/logo_blue.png" /> 诊断云
+                    </label>
+                </div>
+                <div class="headNav">
+                    <ul>
+                        <li>
+                            <a href="./index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="./knowmore.html">了解诊断</a>
+                        </li>
+                        <li>
+                            <a href="./modallib.html">诊断模型库</a>
+                        </li>
+                        <li class="navOn">
+                            <a href="./list.html">诊断服务</a>
+                        </li>
+                        <li>
+                            <a href="./map.html">诊断服务地图</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">关于我们</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="headUser yesSessionid showBox">
+                    <div class="headUser_name">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <span></span>
+                    </div>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="headUser hide noSessionid">
+                    <a href="./login.html" class="alogin">登录</a>
+                </div>
+                <div class="signOut">
+                    <i class="fa fa-caret-up" aria-hidden="true"></i>
+                    <ul>
+                        <li>
+                            <a href="./mine.html">我的诊断</a>
+                        </li>
+                        <li>
+                            <a id="comment">我要点评</a>
+                        </li>
+                        <li>
+                            <a id="feedback">意见反馈</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" id="outLogin">退出</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <p class="all_titles">工业互联网成熟度评测</p>
+        <div class="content">
+            <!--上一步  class="fa fa-chevron-left"-->
+            <div class="next_or_pre" id="previous"><i><</i></div>
+            <!--下一步  class="fa fa-chevron-right"-->
+            <div class="next_or_pre" id="next"><i>></i></div>
+
+            <!--title说明-->
+            <div class="option_title">
+                <h4>请选择评测范围</h4>
+                <p>评估问卷中每道题的选项设置均依照梯次递进的思路，一定程度上反映了企业工业互联网建设的过程。该类型可以对单项核心能力进行评估，也可以对综合能力进行评估。</p>
+            </div>
+
+
+            <!--综合  单项测评-->
+            <div class="entirety_or_single" id="entirety_or_single">
+                <div class="entirety">
+                    <div id="entirety" >
+                        <div class="e_img">
+                            <div class="e_top_right"></div>
+                            <div class="e_bottom_left"></div>
+                            <img src="./img/settings-1.png" alt="">
+
+                            <p>综合评测</p>
+
+                        </div>
+                        <span class="radio_es"><i></i></span>
+                    </div>
+                </div>
+                <div class="single">
+                    <h4>单项评测 <span>（可多选）</span></h4>
+                    <div class="s_content" id="single">
+                        <div>
+                            <div class="s_img">
+                                <div class="s_top_right tr_one"></div>
+                                <div class="s_bottom_left bl_one"></div>
+                                <img src="./img/network-1.png" alt="">
+
+                                <p>互联互通</p>
+                            </div>
+                            <span class="radio_es"><i data-type="3"></i></span>
+                        </div>
+                        <div>
+                            <div class="s_img">
+                                <div class="s_top_right tr_two"></div>
+                                <div class="s_bottom_left bl_two"></div>
+                                <img src="./img/cube.png" alt="">
+
+                                <p>综合集成</p>
+                            </div>
+                            <span class="radio_es"><i data-type="2"></i></span>
+                        </div>
+                        <div>
+                            <div class="s_img">
+                                <div class="s_top_right tr_three"></div>
+                                <div class="s_bottom_left bl_three"></div>
+                                <img src="./img/monitor.png" alt="">
+                                
+                                <p>数据分析利用</p>
+                            </div>
+                            <span class="radio_es"><i data-type="1"></i></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <p class="hint_o">请选择评测范围</p>
+        </div>
+    </main>
+
+    <div class="footer_white">
+        <p>版权所有 @ 2000-2018 中软国际制造云 All Rights Reserved</p>
+        <p>京ICP 备15012914号-12 京公网安备11010802022625</p>
+    </div>
+
+</body>
+<script src="./lib/jquery.js"></script>
+<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./js/bootstrap-datetimepicker.min.js"></script>
+<script src="./js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/internetOptions.js"></script>
+
+</html>
